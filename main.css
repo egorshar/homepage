@@ -1,0 +1,197 @@
+
+body {
+  background: url(bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(255,255,255,.9);
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  margin-left: 50%;
+  margin-top: 15vh;
+  margin-right: 50px;
+}
+
+.logo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 160px;
+  font-size: 20px;
+}
+.logo-inner {
+  width: 55px;
+  height: 55px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.element {
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.typed-cursor {
+  font-size: 20px;
+  line-height: 1.5em;
+
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* icons */
+@font-face {
+    font-family: 'si';
+    src: url('icons/socicon.eot');
+    src: url('icons/socicon.eot?#iefix') format('embedded-opentype'),
+         url('icons/socicon.woff') format('woff'),
+         url('icons/socicon.ttf') format('truetype'),
+         url('icons/socicon.svg#icomoonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family:si;
+        src: url(icons/socicon.svg) format(svg);
+    }
+}
+
+.soc {
+  opacity: 0;
+  overflow:hidden;
+  margin:0; padding:0;
+  list-style:none;
+  margin-top: 10px;
+
+  transition: opacity .5s;
+}
+
+.soc li {
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+}
+
+.soc li a {
+  font-family:si!important;
+  font-style:normal;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  box-sizing:border-box;
+  overflow:hidden;
+  text-decoration:none;
+  text-align:center;
+  display:block;
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 27px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 15px;
+  color: #ffffff;
+  background-color: none;
+}
+
+.soc-icon-last{
+  margin:0 !important;
+}
+
+.soc-facebook {
+  background-color: #3e5b98;
+}
+.soc-facebook:before {
+  content:'\e041';
+}
+.soc-vkontakte {
+  background-color: #5a7fa6;
+}
+.soc-vkontakte:before {
+  content:'\e01a';
+}
+.soc-github {
+  background-color: #221e1b;
+}
+.soc-github:before {
+  content:'\e030';
+}
+.soc-linkedin {
+  background-color: #3371b7;
+}
+.soc-linkedin:before {
+  content:'\e049';
+}
+.soc-instagram {
+  background-color: #405de6;
+}
+.soc-instagram:before {
+  content:'\e057';
+}
+
+/* end of icons */
+
+.footer {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  z-index: 2;
+  font-size: 12px;
+  color: #000;
+}
