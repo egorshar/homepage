@@ -3,7 +3,7 @@ import Gallery from '../components/Gallery';
 import Layout from '../components/Layout';
 import SocialProfiles from '../components/SocialProfiles';
 
-import '../static/raster/raster.css';
+import '../static/global.css';
 
 export default function Blog() {
   return (

@@ -1,7 +1,7 @@
 
 import Layout from '../components/Layout';
 
-import '../static/raster/raster.css';
+import '../static/global.css';
 
 export default function About() {
   return (
