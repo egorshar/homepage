@@ -9,4 +9,4 @@ cat CNAME > out/CNAME
 git add out
 git commit out -m "bump build"
 git push origin master
-git subtree push --prefix out origin gh-pages
+git push origin `git subtree split --prefix out master`:gh-pages --force
