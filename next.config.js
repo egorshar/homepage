@@ -1,19 +1,25 @@
 
+const withPlugins = require('next-compose-plugins');
 const withBundleAnalyzer = require("@next/bundle-analyzer");
 const withCSS = require('@zeit/next-css');
 
-module.exports = withCSS(withBundleAnalyzer({
+const nextConfig = {
   exportPathMap: function() {
     return {
       '/': { page: '/' },
       '/about': { page: '/about' }
     };
   },
-  analyzeBrowser: ["browser", "both"].includes(process.env.BUNDLE_ANALYZE),
+  analyzeBrowser: ['browser'].includes(process.env.BUNDLE_ANALYZE),
   bundleAnalyzerConfig: {
     browser: {
       analyzerMode: 'static',
       reportFilename: '../bundles/client.html'
     }
   }
-}));
+};
+
+module.exports = withPlugins([
+  withCSS,
+  withBundleAnalyzer
+], nextConfig);

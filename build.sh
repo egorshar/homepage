@@ -1,8 +1,11 @@
 #!/bin/sh
+rm -rf out
+
 npm run build
 npm run export
 touch out/.nojekyll
 cat CNAME > out/CNAME
+
 git add out
 git commit out -m "bump build"
 git push origin master
