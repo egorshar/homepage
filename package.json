@@ -25,6 +25,7 @@
   "homepage": "https://github.com/egorshar/egorshar.github.io#readme",
   "dependencies": {
     "next": "^9.0.2",
+    "next-ga": "^2.3.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

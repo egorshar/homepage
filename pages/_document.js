@@ -1,27 +1,12 @@
 
 import Document, { Head, Main, NextScript } from 'next/document'
 
-import { GOOGLE_ANALYTICS_ID } from '../utils/constants'
-
 export default class MyDocument extends Document {
   static getInitialProps(ctx) {
     return Document.getInitialProps(ctx)
   }
 
-  setGoogleTags() {
-    return {
-      __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${GOOGLE_ANALYTICS_ID}');
-      `
-    };
-  }
-
   render() {
-    const { isProduction } = this.props;
-
     return (
       <html lang="en">
         <Head>
@@ -38,17 +23,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          {isProduction && (
-            <>
-              <script
-                async
-                src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
-              />
-
-              <script dangerouslySetInnerHTML={this.setGoogleTags()} />
-            </>
-          )}
         </body>
       </html>
     )

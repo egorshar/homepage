@@ -2,15 +2,12 @@
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
+import withGA from "next-ga";
 import React from 'react'
 
-import { trackPageView } from '../utils'
+import { GOOGLE_ANALYTICS_ID } from '../utils/constants'
 
-export default class EgorShar extends App {
-  componentDidMount() {
-    Router.onRouteChangeComplete = url => trackPageView(url)
-  }
-
+class EgorShar extends App {
   render() {
     const { Component } = this.props
 
@@ -24,3 +21,5 @@ export default class EgorShar extends App {
     )
   }
 }
+
+export default withGA(GOOGLE_ANALYTICS_ID, Router)(EgorShar);
