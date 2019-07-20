@@ -23,14 +23,14 @@ var _jsxFileName = "/Users/egorshar/Desktop/egorshar/components/Gallery.js";
     className: "jsx-3381391095" + " " + "portrait",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 4
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "jsx-3381391095",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 5
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -40,13 +40,13 @@ var _jsxFileName = "/Users/egorshar/Desktop/egorshar/components/Gallery.js";
     className: "jsx-3381391095",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 6
     },
     __self: this
   }, "Como Lake, 2018")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
     id: "3381391095",
     __self: this
-  }, ".portrait.jsx-3381391095{border-radius:4px;box-shadow:0px 0px 30px 0px rgba(0,0,0,0.15);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9lZ29yc2hhci9EZXNrdG9wL2Vnb3JzaGFyL2NvbXBvbmVudHMvR2FsbGVyeS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFNZ0IsQUFHMkIsa0JBQzJCLDZDQUMvQyIsImZpbGUiOiIvVXNlcnMvZWdvcnNoYXIvRGVza3RvcC9lZ29yc2hhci9jb21wb25lbnRzL0dhbGxlcnkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCAoKSA9PiAoXG4gIDw+XG4gICAgPGltZyBzcmM9XCIvc3RhdGljL2Vnb3IuanBnXCIgY2xhc3NOYW1lPVwicG9ydHJhaXRcIiBhbHQ9XCJcIiAvPlxuICAgIDxwPlxuICAgICAgPGEgaHJlZj1cImh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vcC9CckRYUXR1QURVZi9cIiB0YXJnZXQ9XCJfYmxhbmtcIiByZWw9XCJub2ZvbGxvdyBub29wZW5lclwiPkNvbW8gTGFrZSwgMjAxODwvYT5cbiAgICA8L3A+XG4gICAgPHN0eWxlIGpzeD57YFxuICAgICAgLnBvcnRyYWl0IHtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBib3gtc2hhZG93OiAwcHggMHB4IDMwcHggMHB4IHJnYmEoMCwwLDAsMC4xNSk7XG4gICAgICB9XG4gICAgYH08L3N0eWxlPlxuICA8Lz5cbik7XG5cbiJdfQ== */\n/*@ sourceURL=/Users/egorshar/Desktop/egorshar/components/Gallery.js */"));
+  }, ".portrait.jsx-3381391095{border-radius:4px;box-shadow:0px 0px 30px 0px rgba(0,0,0,0.15);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9lZ29yc2hhci9EZXNrdG9wL2Vnb3JzaGFyL2NvbXBvbmVudHMvR2FsbGVyeS5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPZ0IsQUFHMkIsa0JBQzJCLDZDQUMvQyIsImZpbGUiOiIvVXNlcnMvZWdvcnNoYXIvRGVza3RvcC9lZ29yc2hhci9jb21wb25lbnRzL0dhbGxlcnkuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcbmV4cG9ydCBkZWZhdWx0ICgpID0+IChcbiAgPD5cbiAgICA8aW1nIHNyYz1cIi9zdGF0aWMvZWdvci5qcGdcIiBjbGFzc05hbWU9XCJwb3J0cmFpdFwiIGFsdD1cIlwiIC8+XG4gICAgPHA+XG4gICAgICA8YSBocmVmPVwiaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9wL0JyRFhRdHVBRFVmL1wiIHRhcmdldD1cIl9ibGFua1wiIHJlbD1cIm5vZm9sbG93IG5vb3BlbmVyXCI+Q29tbyBMYWtlLCAyMDE4PC9hPlxuICAgIDwvcD5cbiAgICA8c3R5bGUganN4PntgXG4gICAgICAucG9ydHJhaXQge1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGJveC1zaGFkb3c6IDBweCAwcHggMzBweCAwcHggcmdiYSgwLDAsMCwwLjE1KTtcbiAgICAgIH1cbiAgICBgfTwvc3R5bGU+XG4gIDwvPlxuKTtcbiJdfQ== */\n/*@ sourceURL=/Users/egorshar/Desktop/egorshar/components/Gallery.js */"));
 });
 
 /***/ }),
@@ -11208,8 +11208,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Gallery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Gallery */ "./components/Gallery.js");
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
 /* harmony import */ var _components_SocialProfiles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/SocialProfiles */ "./components/SocialProfiles.js");
-/* harmony import */ var _static_raster_raster_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../static/raster/raster.css */ "./static/raster/raster.css");
-/* harmony import */ var _static_raster_raster_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_static_raster_raster_css__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _static_global_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../static/global.css */ "./static/global.css");
+/* harmony import */ var _static_global_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_static_global_css__WEBPACK_IMPORTED_MODULE_5__);
 
 var _jsxFileName = "/Users/egorshar/Desktop/egorshar/pages/index.js";
 
