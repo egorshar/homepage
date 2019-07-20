@@ -1,3 +1,4 @@
+
 export default () => (
   <>
     <img src="/static/egor.jpg" className="portrait" alt="" />
@@ -12,4 +13,3 @@ export default () => (
     `}</style>
   </>
 );
-
