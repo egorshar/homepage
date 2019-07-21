@@ -118,6 +118,12 @@ class InstagramPosts extends Component {
             box-shadow: none;
             cursor: pointer;
           }
+
+          @media only screen and (max-width: 600px) {
+            .next-slide {
+              display: none;
+            }
+          }
         `}</style>
       </div>
     )
