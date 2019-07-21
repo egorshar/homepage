@@ -106,6 +106,10 @@ class InstagramPosts extends Component {
             cursor: e-resize;
           }
 
+          .gallery :global(a) {
+            white-space: normal;
+          }
+
           .next-slide {
             position: absolute;
             top: 0;
