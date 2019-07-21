@@ -2,10 +2,13 @@
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
-import withGA from "next-ga";
 import React from 'react'
 
 import { GOOGLE_ANALYTICS_ID } from '../utils/constants'
+import { pageview } from '../utils/gtag'
+import { isDev } from '../utils/';
+
+Router.events.on('routeChangeComplete', url => pageview(url))
 
 class EgorShar extends App {
   render() {
@@ -15,6 +18,25 @@ class EgorShar extends App {
       <Container>
         <Head>
           <title>Egor Sharapov's Homepage</title>
+          {
+            !isDev() && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_ID}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GOOGLE_ANALYTICS_ID}');
+                  `
+                }}
+              />
+            </>
+          )}
         </Head>
         <Component />
       </Container>
@@ -22,4 +44,4 @@ class EgorShar extends App {
   }
 }
 
-export default withGA(GOOGLE_ANALYTICS_ID, Router)(EgorShar);
+export default EgorShar

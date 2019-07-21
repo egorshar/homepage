@@ -7,7 +7,7 @@ const nextConfig = {
   exportPathMap: function() {
     return {
       '/': { page: '/' },
-      '/about': { page: '/about' }
+      '/secret-chamber': { page: '/secret-chamber' }
     };
   },
   analyzeBrowser: ['browser'].includes(process.env.BUNDLE_ANALYZE),
