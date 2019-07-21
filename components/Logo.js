@@ -27,7 +27,7 @@ const Logo = props => (
         position: absolute;
         background: #000;
         width: 105%;
-        height: 160%;
+        height: 155%;
         top: 50%;
         transform: translate(-1px, -50%);
         border-radius: 70px;
