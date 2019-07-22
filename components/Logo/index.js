@@ -2,10 +2,12 @@
 import { withRouter } from 'next/router'
 import Link from 'next/link'
 
+import Icon from './Icon'
+
 const Logo = props => (
   <>
     <h2>
-      egor<span className="shar">shar</span>
+      <Icon />
       {props.isIndex && (
         <Link href="/secret-chamber">
           <button>✨</button>
@@ -15,7 +17,6 @@ const Logo = props => (
     <style jsx>{`
       h2 {
         display: flex;
-        padding: 12px 0;
         margin-bottom: var(--lineHeight);
       }
       .shar {
