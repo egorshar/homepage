@@ -4,7 +4,7 @@ import { GOOGLE_ANALYTICS_ID } from './constants';
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = url => {
-  if (isDev) return;
+  if (isDev()) return;
 
   window.gtag('config', GOOGLE_ANALYTICS_ID, {
     page_path: url
@@ -13,7 +13,7 @@ export const pageview = url => {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = ({ action, category, label, value }) => {
-  if (isDev) return;
+  if (isDev()) return;
 
   window.gtag('event', action, {
     event_category: category,
