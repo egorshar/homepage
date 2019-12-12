@@ -1,5 +1,5 @@
 
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
 import React from 'react'
@@ -15,7 +15,7 @@ class EgorShar extends App {
     const { Component } = this.props
 
     return (
-      <Container>
+      <>
         <Head>
           <title>Egor Sharapov's Homepage</title>
           {
@@ -39,7 +39,7 @@ class EgorShar extends App {
           )}
         </Head>
         <Component />
-      </Container>
+      </>
     )
   }
 }

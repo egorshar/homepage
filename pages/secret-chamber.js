@@ -3,7 +3,7 @@ import YouTube from 'react-youtube'
 
 import Layout from '../components/Layout'
 
-import '../static/global.css'
+import '../public/static/global.css'
 
 export default function About() {
   return (

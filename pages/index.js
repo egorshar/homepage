@@ -3,7 +3,7 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/Layout'
 import SocialProfiles from '../components/SocialProfiles'
 
-import '../static/global.css';
+import '../public/static/global.css';
 
 export default () => (
   <Layout>
