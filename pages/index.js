@@ -11,7 +11,7 @@ export default () => (
       <p>Hi, there 👋</p>
       <p>
         My name is Egor and I'm a frontend-developer<br />
-        Over the last {(Math.floor((Date.now() - new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)')) / (1000 * 60 * 60 * 24 * 30 * 12)))} years I have been working in amoCRM<br />
+        Over the last {(Math.floor((Date.now() - new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)')) / (1000 * 60 * 60 * 24 * 30 * 12)))} years I have been working at amoCRM<br />
         Currently not available for hire
       </p>
 
