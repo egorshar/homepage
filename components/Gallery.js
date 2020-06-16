@@ -83,13 +83,6 @@ class InstagramPosts extends Component {
           loader={this.loader()}
         />
 
-        <button
-          className="next-slide"
-          onClick={this.onImageClick.bind(this)}
-        >
-          ⏩
-        </button>
-
         <style jsx>{`
           .gallery {
             max-width: 500px;
@@ -108,25 +101,6 @@ class InstagramPosts extends Component {
 
           .gallery :global(a) {
             white-space: normal;
-          }
-
-          .next-slide {
-            position: absolute;
-            top: 0;
-            left: 100%;
-            height: calc(100% - 45px);
-            padding: 0;
-            width: 50px;
-            border: 0;
-            background: none;
-            box-shadow: none;
-            cursor: pointer;
-          }
-
-          @media only screen and (max-width: 600px) {
-            .next-slide {
-              display: none;
-            }
           }
         `}</style>
       </div>
