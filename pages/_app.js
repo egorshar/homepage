@@ -6,7 +6,9 @@ import React from 'react'
 
 import { GOOGLE_ANALYTICS_ID } from '../utils/constants'
 import { pageview } from '../utils/gtag'
-import { isDev } from '../utils/';
+import { isDev } from '../utils/'
+
+import '../public/static/global.css'
 
 Router.events.on('routeChangeComplete', url => pageview(url))
 

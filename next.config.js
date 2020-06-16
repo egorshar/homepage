@@ -1,7 +1,6 @@
 
 const withPlugins = require('next-compose-plugins');
 const withBundleAnalyzer = require("@next/bundle-analyzer");
-const withCSS = require('@zeit/next-css');
 
 const nextConfig = {
   exportPathMap: function() {
@@ -20,6 +19,5 @@ const nextConfig = {
 };
 
 module.exports = withPlugins([
-  withCSS,
   withBundleAnalyzer
 ], nextConfig);

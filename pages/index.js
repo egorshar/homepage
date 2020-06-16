@@ -3,8 +3,6 @@ import Gallery from '../components/Gallery'
 import Layout from '../components/Layout'
 import SocialProfiles from '../components/SocialProfiles'
 
-import '../public/static/global.css';
-
 export default () => (
   <Layout>
     <c is="div" cell="1-4" cell-s="row">
