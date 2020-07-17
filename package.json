@@ -25,7 +25,7 @@
   "homepage": "https://github.com/egorshar/egorshar.github.io#readme",
   "dependencies": {
     "isomorphic-unfetch": "^3.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-content-loader": "^4.3.4",
