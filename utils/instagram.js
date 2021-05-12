@@ -1,28 +1,27 @@
+import get from "lodash/get";
+import reduce from "lodash/reduce";
+import shuffle from "lodash/shuffle";
+import fetch from "isomorphic-unfetch";
 
-import get from 'lodash/get'
-import reduce from 'lodash/reduce'
-import shuffle from 'lodash/shuffle'
-import fetch from 'isomorphic-unfetch'
-
-import { INSTAGRAM_DOMAIN, MY_INSTAGRAM_USER_ID } from './constants';
-
-export const generatePostURL = short_code => `${INSTAGRAM_DOMAIN}/p/${short_code}/`
+import { MY_INSTAGRAM_ACCESS_TOKEN } from "./constants";
 
 export default async function () {
-  const res = await fetch(`${INSTAGRAM_DOMAIN}/explore/tags/egorsharhomepage/?__a=1`)
-  const data = await res.json()
+  const res = await fetch(
+    `https://graph.instagram.com/me/media?fields=id,caption,permalink,media_url&access_token=${MY_INSTAGRAM_ACCESS_TOKEN}`
+  );
+  const data = await res.json();
 
   const posts = reduce(
-    get(data, 'graphql.hashtag.edge_hashtag_to_media.edges', []),
-    (result, { node }) => {
-      if (parseInt(node.owner.id) === MY_INSTAGRAM_USER_ID) {
-        result.push(node)
+    get(data, "data", []),
+    (result, post) => {
+      if (get(post, "caption", "").indexOf("egorsharhomepage") > -1) {
+        result.push(post);
       }
 
-      return result
+      return result;
     },
     []
-  )
+  );
 
-  return shuffle(posts)
+  return shuffle(posts);
 }

@@ -5,7 +5,7 @@
   "main": "next.config.js",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev -p 3001",
     "start": "next start",
     "build": "next build",
     "export": "next export",
@@ -24,19 +24,20 @@
   },
   "homepage": "https://github.com/egorshar/egorshar.github.io#readme",
   "dependencies": {
-    "isomorphic-unfetch": "^3.0.0",
-    "lodash": "^4.17.15",
-    "next": "^9.4.4",
-    "react": "^16.13.1",
-    "react-content-loader": "^4.3.4",
-    "react-dom": "^16.13.1",
-    "react-image": "^2.4.0",
-    "react-youtube": "^7.11.2"
+    "isomorphic-unfetch": "^3.1.0",
+    "lodash": "^4.17.21",
+    "next": "^10.2.0",
+    "react": "^17.0.1",
+    "react-content-loader": "^6.0.3",
+    "react-dom": "^17.0.1",
+    "react-image": "^4.0.3",
+    "react-youtube": "^7.13.1"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^9.4.4",
     "cross-env": "^6.0.3",
-    "cssnano": "^4.1.10",
-    "next-compose-plugins": "^2.2.0"
+    "cssnano": "^5.0.2",
+    "next-compose-plugins": "^2.2.0",
+    "postcss": "^8.2.15"
   }
 }

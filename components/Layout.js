@@ -1,7 +1,6 @@
-
 import Logo from './Logo';
 
-const Layout = props => (
+const Layout = (props) => (
   <>
     <Logo />
     <grid is="div" columns="9">

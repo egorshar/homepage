@@ -1,27 +1,25 @@
+import App from 'next/app';
+import Head from 'next/head';
+import Router from 'next/router';
+import React from 'react';
 
-import App from 'next/app'
-import Head from 'next/head'
-import Router from 'next/router'
-import React from 'react'
+import { GOOGLE_ANALYTICS_ID } from '../utils/constants';
+import { pageview } from '../utils/gtag';
+import { isDev } from '../utils/';
 
-import { GOOGLE_ANALYTICS_ID } from '../utils/constants'
-import { pageview } from '../utils/gtag'
-import { isDev } from '../utils/'
+import '../public/static/global.css';
 
-import '../public/static/global.css'
-
-Router.events.on('routeChangeComplete', url => pageview(url))
+Router.events.on('routeChangeComplete', (url) => pageview(url));
 
 class EgorShar extends App {
   render() {
-    const { Component } = this.props
+    const { Component } = this.props;
 
     return (
       <>
         <Head>
           <title>Egor Sharapov's Homepage</title>
-          {
-            !isDev() && (
+          {!isDev() && (
             <>
               <script
                 async
@@ -34,7 +32,7 @@ class EgorShar extends App {
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
                     gtag('config', '${GOOGLE_ANALYTICS_ID}');
-                  `
+                  `,
                 }}
               />
             </>
@@ -42,8 +40,8 @@ class EgorShar extends App {
         </Head>
         <Component />
       </>
-    )
+    );
   }
 }
 
-export default EgorShar
+export default EgorShar;

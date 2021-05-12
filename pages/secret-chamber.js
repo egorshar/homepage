@@ -1,7 +1,6 @@
+import YouTube from 'react-youtube';
 
-import YouTube from 'react-youtube'
-
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 
 export default function About() {
   return (
@@ -14,12 +13,12 @@ export default function About() {
             videoId="dQw4w9WgXcQ"
             opts={{
               playerVars: {
-                autoplay: 1
-              }
+                autoplay: 1,
+              },
             }}
           />
         </p>
       </c>
     </Layout>
-  )
+  );
 }

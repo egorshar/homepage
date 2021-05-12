@@ -1,10 +1,9 @@
+import { withRouter } from 'next/router';
+import Link from 'next/link';
 
-import { withRouter } from 'next/router'
-import Link from 'next/link'
+import Icon from './Icon';
 
-import Icon from './Icon'
-
-const Logo = props => (
+const Logo = (props) => (
   <>
     <h2>
       <Icon />
@@ -24,7 +23,7 @@ const Logo = props => (
         position: relative;
       }
       .shar:before {
-        content: "";
+        content: '';
         position: absolute;
         background: #000;
         width: 105%;
@@ -49,20 +48,24 @@ const Logo = props => (
   </>
 );
 
-const LogoWithIndex = props => props.router.pathname !== '/'
-  ? <Link href="/">
+const LogoWithIndex = (props) =>
+  props.router.pathname !== '/' ? (
+    <Link href="/">
       <a>
         <Logo isIndex={false} />
         <style jsx>{`
           a {
-            text-decoration-color: rgba(0,0,0,1);
+            text-decoration-color: rgba(0, 0, 0, 1);
           }
-          a:hover, a:active {
+          a:hover,
+          a:active {
             color: black;
           }
         `}</style>
       </a>
     </Link>
-  : <Logo isIndex />
+  ) : (
+    <Logo isIndex />
+  );
 
-  export default withRouter(LogoWithIndex);
+export default withRouter(LogoWithIndex);
