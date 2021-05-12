@@ -1,1 +1,0 @@
-self.__BUILD_MANIFEST = (function(a){return {"/":[a],"/index":[a],"/secret-chamber":[a]}}("static\u002Fchunks\u002F617a0259b49b4bded6c8fb102cfc8c65c8fa0e6a.85acc9f8a6098448173f.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
