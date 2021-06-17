@@ -1,0 +1,19 @@
+{
+  "name": "homepage-tg-api",
+  "version": "1.0.0",
+  "description": "Homepage API gateway to mirror TG Channel posts",
+  "main": "index.js",
+  "scripts": {
+    "session": "node session.js"
+  },
+  "author": "egorshar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "lodash": "^4.17.21",
+    "telegram": "^1.7.7"
+  },
+  "devDependencies": {
+    "input": "^1.0.1"
+  }
+}
