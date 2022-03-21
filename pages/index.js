@@ -13,7 +13,7 @@ export default () => (
 
     <r-cell span="3" span-s="row" class="intro">
       <p>
-        My name is Egor Sharapov. I'm frontend developer with more than 10
+        My name is Egor Sharapov. I'm a frontend developer with more than 10
         years of relevant experience.
       </p>
 
