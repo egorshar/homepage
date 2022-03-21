@@ -7,32 +7,38 @@ export default () => (
   <Layout>
     <r-cell order="-10" span="4" span-s="4">
       <h1>
-        Hello / <Link href="/ru">привет</Link> 👋
+        <Link href="/">Hello</Link> / привет 👋
       </h1>
     </r-cell>
 
     <r-cell span="3" span-s="row" class="intro">
       <p>
-        My name is Egor Sharapov. I'm frontend developer with more than 10
-        years of relevant experience.
+        Меня зовут Егор Шарапов. Я frontend-разработчик с более чем 10-летним
+        опытом.
       </p>
 
       <p>
-        Over the last{' '}
+        Последние{' '}
         {Math.floor(
           (Date.now() - new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)')) /
             (1000 * 60 * 60 * 24 * 30 * 12)
         )}{' '}
-        (OMG) years I have been working at{' '}
-        <a href="https://amocrm.com" target="_blank" rel="noopener nofollow">
+        (OMG) лет я работаю в{' '}
+        <a href="https://amocrm.ru" target="_blank" rel="noopener nofollow">
           amoCRM
         </a>
         .
+        {/* <br />
+        Чем я все это время занимался?
+        <br />
+        <a href="/work/" target="_blank" rel="noopener nofollow">
+          Можете почитать подробнее →
+        </a> */}
       </p>
 
       <p>
-        Before that a couple of years (since 2010) I've worked in one of the
-        top Russian web-agencies &mdash;{' '}
+        До этого пару лет (с 2010) работал в одной из ведущих веб-студий
+        России{' '}
         <a
           href="https://www.google.com/search?q=site%3Aqsoft.ru+%D0%B5%D0%B3%D0%BE%D1%80+%D1%88%D0%B0%D1%80%D0%B0%D0%BF%D0%BE%D0%B2"
           target="_blank"
@@ -40,7 +46,9 @@ export default () => (
         >
           QSOFT
         </a>
-        . After QSOFT I have developed Moscow based fixed gear e-store{' '}
+        , потом, примерно, полгода фрилансил. За время фриланса почти в
+        одиночку реализовал всю механику первой версии интернет-магазина
+        городских велосипедов{' '}
         <a
           href="https://citycycle.ru"
           target="_blank"
@@ -52,37 +60,44 @@ export default () => (
       </p>
 
       <p>
-        In my spare time I experiment with technologines and frameworks (from
-        Arduino to react-native).
+        В свободное время я экспериментирую с технологиями и фреймворками (от
+        Arduino до react-native), редко пишу в{' '}
+        <a
+          href="https://t.me/opg_dev"
+          target="_blank"
+          rel="noopener nofollow"
+        >
+          телеграм канал
+        </a>
+        .
       </p>
 
       <p>
-        Besides development I like football. Before university I have played
-        football at Youth sports school level. Most recently &mdash; at the
-        amateur level in{' '}
+        Помимо разработки увлекаюсь футболом. До университета играл на уровне
+        ДЮСШ, последние годы &mdash; на любительском уровне в{' '}
         <a
           href="https://training.cityfootball.ru/player/view/134522"
           target="_blank"
           rel="noopener nofollow"
         >
           CityFootball
-        </a>{' '}
-        Moscow.
+        </a>
+        .
       </p>
     </r-cell>
 
-    <r-cell class="bio" order-xs="-1" span="5-6" span-s="row">
+    <r-cell class="bio" span="5-6" span-s="row">
       <SocialProfiles />
     </r-cell>
 
     <r-cell class="footer" span="6">
-      <h4>This website</h4>
+      <h4>Этот сайт</h4>
 
       <ul>
         <li class="vercel">
-          Deployed with
+          Задеплоен в
           <a
-            href="https://vercel.com/"
+            href="https://vercel.com"
             target="_blank"
             rel="noopener nofollow"
           >
@@ -100,9 +115,9 @@ export default () => (
           </a>
         </li>
         <li class="next">
-          Developed with
+          Разработан с помощью
           <a
-            href="https://nextjs.org/"
+            href="https://nextjs.org"
             target="_blank"
             rel="noopener nofollow"
           >

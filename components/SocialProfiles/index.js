@@ -1,18 +1,16 @@
 import map from 'lodash/map';
 
-import InstagramIcon from './Icons/Instagram';
-import FacebookIcon from './Icons/Facebook';
 import GithubIcon from './Icons/Github';
 import LinkedInIcon from './Icons/LinkedIn';
-import VKIcon from './Icons/VK';
+import NPMIcon from './Icons/NPM';
+import TelegramIcon from './Icons/Telegram';
 
 const socials = [
   {
-    url: 'https://www.facebook.com/egorshar',
-    name: 'Facebook',
-    icon: <FacebookIcon />,
+    url: 'https://t.me/egorshar',
+    name: 'Telegram',
+    icon: <TelegramIcon />,
   },
-  { url: 'https://vk.com/egorshar', name: 'VK', icon: <VKIcon /> },
   { url: 'https://github.com/egorshar', name: 'GitHub', icon: <GithubIcon /> },
   {
     url: 'https://www.linkedin.com/in/egor-sharapov-18a7a262/',
@@ -20,15 +18,16 @@ const socials = [
     icon: <LinkedInIcon />,
   },
   {
-    url: 'https://www.instagram.com/egorshar/',
-    name: 'Instagram',
-    icon: <InstagramIcon />,
+    url: 'https://www.npmjs.com/package/jquery-ui-sortable-animation',
+    name: 'NPM',
+    icon: <NPMIcon />,
   },
 ];
 
 export default () => (
   <>
-    <p>My social profiles:</p>
+    <img src="/static/egor.jpg" alt="Me" />
+
     <ul>
       {map(socials, (social) => (
         <li className="social-item" key={social.url}>
@@ -44,6 +43,7 @@ export default () => (
         </li>
       ))}
     </ul>
+
     <style jsx>{`
       ul {
         padding: 0;
