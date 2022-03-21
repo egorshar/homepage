@@ -52,13 +52,13 @@ export default () => (
       </p>
 
       <p>
-        In my spare time I experiment with technologines and frameworks (from
+        In my spare time I experiment with technologies and frameworks (from
         Arduino to react-native).
       </p>
 
       <p>
         Besides development I like football. Before university I have played
-        football at Youth sports school level. Most recently &mdash; at the
+        football at the Youth sports school level. Most recently &mdash; at the
         amateur level in{' '}
         <a
           href="https://training.cityfootball.ru/player/view/134522"
