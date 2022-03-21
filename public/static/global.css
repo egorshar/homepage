@@ -1,37 +1,72 @@
 
-@import "./raster/raster.css";
-
-* {
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-}
-@media only screen and (max-width: 600px) { html, body {
-  height: initial;
-}}
-
-#__next {
-  min-height: 100%;
-}
-a:focus, button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(178, 178, 178, 0.3);
-}
+@import "./raster/raster2.css";
 
 :root {
-  --grey: #666;
+  --hr-weight: 2px;
+  --unit: calc(var(--fontSize)*0.5);
+  --grey: rgb(77, 52, 52);
   --darkGrey: #444;
   --fontSize: calc(100vw / 90);
 }
-@media only screen and (max-width: 600px) { :root {
-  --fontSize: calc(100vw / 30);
-}}
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) { :root {
-  --fontSize: calc(100vw / 60);
-}}
+@media only screen and (max-width: 600px) {
+  :root {
+    --fontSize: calc(100vw / 30);
+  }
+}
 
-@media only screen and (max-device-width: 812px) and (orientation: landscape) { :root {
-  --fontSize: 1.7vw;
-}}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  :root {
+    --fontSize: calc(100vw / 60);
+  }
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  :root {
+    --fontSize: 1.7vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  r-grid.main .bio img {
+    max-height: 450px;
+  }
+}
+
+r-cell[order="-9"] { order: -9; }
+r-cell[order="-10"] { order: -10; }
+
+r-grid.main .footer {
+  border-top: var(--hr-weight) solid #000;
+  margin-top: calc(var(--unit) * 3);
+  padding-top: calc(var(--unit) * 3);
+}
+
+r-grid.main .footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+r-grid.main .footer li {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+r-grid.main .footer li a {
+  display: inline-flex;
+}
+
+r-grid.main .footer li.vercel svg {
+  width: auto;
+  height: 18px;
+  margin-left: 10px;
+}
+
+r-grid.main .footer li.next svg {
+  width: auto;
+  height: 30px;
+  margin-left: 5px;
+}

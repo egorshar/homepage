@@ -1,51 +1,29 @@
 import { withRouter } from 'next/router';
 import Link from 'next/link';
 
-import Icon from './Icon';
-
 const Logo = (props) => (
-  <>
-    <h2>
-      <Icon />
-      {props.isIndex && (
-        <Link href="/secret-chamber">
-          <button>✨</button>
-        </Link>
-      )}
-    </h2>
+  <div>
+    <img
+      src="/static/shar.webp"
+      className="logo"
+      alt='Spere pronounces like "shar" in Russian'
+    />
+
     <style jsx>{`
-      h2 {
-        display: flex;
-        margin-bottom: var(--lineHeight);
-      }
-      .shar {
-        color: #fff;
-        position: relative;
-      }
-      .shar:before {
-        content: '';
-        position: absolute;
-        background: #000;
-        width: 105%;
-        height: 155%;
-        top: 50%;
-        transform: translate(-1px, -50%);
-        border-radius: 70px;
-        z-index: -1;
+      div {
+        width: 83px;
+        height: 73px;
+        overflow: hidden;
       }
 
-      button {
-        padding: 0;
-        border: 0;
-        background: none;
-        margin-left: auto;
-        cursor: pointer;
-      }
-      button:active {
-        outline: none;
+      img {
+        width: 100px;
+        height: 100px;
+        margin-left: -20px;
+        margin-top: -20px;
       }
     `}</style>
-  </>
+  </div>
 );
 
 const LogoWithIndex = (props) =>
@@ -53,13 +31,11 @@ const LogoWithIndex = (props) =>
     <Link href="/">
       <a>
         <Logo isIndex={false} />
+
         <style jsx>{`
           a {
-            text-decoration-color: rgba(0, 0, 0, 1);
-          }
-          a:hover,
-          a:active {
-            color: black;
+            outline: none;
+            box-shadow: none;
           }
         `}</style>
       </a>

@@ -6,7 +6,6 @@ const nextConfig = {
   exportPathMap: function() {
     return {
       '/': { page: '/' },
-      '/secret-chamber': { page: '/secret-chamber' }
     };
   },
   analyzeBrowser: ['browser'].includes(process.env.BUNDLE_ANALYZE),
