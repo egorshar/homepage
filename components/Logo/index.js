@@ -2,11 +2,11 @@ import { withRouter } from 'next/router';
 import Link from 'next/link';
 
 const Logo = (props) => (
-  <div>
+  <div title='Sphere pronounces like "shar" in Russian'>
     <img
       src="/static/shar.webp"
       className="logo"
-      alt='Spere pronounces like "shar" in Russian'
+      alt='Sphere pronounces like "shar" in Russian'
     />
 
     <style jsx>{`
