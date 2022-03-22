@@ -26,7 +26,7 @@ const socials = [
 
 export default () => (
   <>
-    <img src="/static/egor.jpg" alt="Me" />
+    <img src="/static/egor.webp" alt="Me" />
 
     <ul>
       {map(socials, (social) => (
