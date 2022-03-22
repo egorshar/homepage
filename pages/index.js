@@ -40,7 +40,7 @@ export default () => (
         >
           QSOFT
         </a>
-        . After QSOFT I have developed Moscow based fixed gear e-store{' '}
+        . After QSOFT I have developed the first version of Moscow based fixed gear e-store{' '}
         <a href="https://citycycle.ru" target="_blank" rel="noopener nofollow">
           CityCycle
         </a>
@@ -53,7 +53,7 @@ export default () => (
       </p>
 
       <p>
-        Besides development I like football. Before university I have played
+        Besides programming I like football. Before university I have played
         football at the Youth sports school level. Most recently &mdash; at the
         amateur level in{' '}
         <a
