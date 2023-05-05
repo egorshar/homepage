@@ -1,1 +1,2 @@
 export const GOOGLE_ANALYTICS_ID = 'UA-11443496-9';
+export const LATEST_TELEGRAM_POSTS = [22, 11];

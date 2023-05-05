@@ -28,7 +28,7 @@ const Logo = (props) => (
 
 const LogoWithIndex = (props) =>
   props.router.pathname !== '/' ? (
-    <Link href="/">
+    <Link href="/" legacyBehavior>
       <a>
         <Logo isIndex={false} />
 

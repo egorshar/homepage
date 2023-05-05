@@ -1,6 +1,7 @@
-
-const withPlugins = require('next-compose-plugins');
-const withBundleAnalyzer = require("@next/bundle-analyzer");
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.BUNDLE_ANALYZE === 'true',
+  openAnalyzer: false,
+});
 
 const nextConfig = {
   exportPathMap: function() {
@@ -8,15 +9,6 @@ const nextConfig = {
       '/': { page: '/' },
     };
   },
-  analyzeBrowser: ['browser'].includes(process.env.BUNDLE_ANALYZE),
-  bundleAnalyzerConfig: {
-    browser: {
-      analyzerMode: 'static',
-      reportFilename: '../bundles/client.html'
-    }
-  }
 };
 
-module.exports = withPlugins([
-  withBundleAnalyzer
-], nextConfig);
+module.exports = withBundleAnalyzer(nextConfig);
