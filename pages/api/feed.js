@@ -23,6 +23,8 @@ export default async function handler(req, res) {
       })
     );
 
+    // cache for a week
+    res.setHeader('Cache-Control', 's-maxage=604800');
     res.status(200).json(map(result.messages, ({ date, message }) => ({
       date,
       message
