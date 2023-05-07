@@ -56,8 +56,8 @@ export default function Page({ params }) {
           <p>
             {/*<Link href="/feed" className="no-underline">*/}
             <Link href="https://t.me/opg_dev" className="no-underline">
-              <button className='flex w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 dark:bg-slate-200 dark:text-slate-800 dark:hover:bg-slate-400 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-800'>
-                <Image src="/static/channel.jpeg" width={32} height={32} className="rounded-full mr-2" alt="Организованная Программерская Группировка" />Организованная Программерская Группировка
+              <button className='flex w-full items-center justify-center rounded-md sm:text-left md:text-center border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 dark:bg-slate-200 dark:text-slate-800 dark:hover:bg-slate-400 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-800'>
+                <Image src="/static/channel.jpeg" width={40} height={40} className="rounded-full mr-2 md:w-[32px]" alt="Организованная Программерская Группировка" />Организованная Программерская Группировка
               </button>
             </Link>
           </p>

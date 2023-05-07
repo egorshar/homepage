@@ -42,7 +42,7 @@ export default function SocialProfiles() {
 
       <ul className='p-0 mt-4'>
         {map(socials, (social) => (
-          <li className='flex mb-2' key={social.url}>
+          <li className='flex mb-2 last:mb-0' key={social.url}>
             <a
               href={social.url}
               className='inline-flex items-center'
