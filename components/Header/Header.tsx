@@ -1,6 +1,6 @@
 import Link from 'next/link';
+
 import Logo from '../Logo/Logo';
-import React from 'react';
 
 export default function Header({ lang }) {
   return (

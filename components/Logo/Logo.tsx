@@ -1,32 +1,46 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
-const Logo = () => (
-  <div className='shrink-0 w-[83px] h-[73px] overflow-hidden' title='Sphere pronounces like "shar" in Russian'>
-    <Image
-      src='/static/shar.webp'
-      className='w-[100px] max-w-[100px] h-[100px] -ml-4 -mt-5'
-      width={600}
-      height={600}
-      alt='Sphere pronounces like "shar" in Russian'
-    />
-  </div>
-);
+const Sphere = dynamic(() => import('./Sphere/Sphere'), { ssr: false });
 
 const LogoWithIndex = () => {
   const pathname = usePathname();
 
+  useEffect(() => {
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, []);
+
   return (
-    pathname !== '/' ? (
-      <Link href='/' className='outline-0 shadow-none'>
-        <Logo />
-      </Link>
-    ) : (
-      <Logo />
-    )
+    <div className='flex relative pr-[64px] select-none'>
+      <h1 className='mb-0'>
+        {pathname !== '/' ? (
+          <Link href='/' className='outline-0 shadow-none'>egor</Link>
+        ) : 'egor'}
+      </h1>
+
+      <Sphere
+        className='absolute right-0 -mr-[24px] -mt-[57px] w-[100px]'
+        theme={localStorage.theme === 'dark' ? 'dark' : 'light'}
+        toggleTheme={() => {
+          if (localStorage.theme === 'dark') {
+            localStorage.removeItem('theme');
+            document.documentElement.classList.remove('dark');
+          } else {
+            localStorage.setItem('theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        }}
+      />
+    </div>
   );
 };
 

@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={inter.className}>
-      <body>
+      <body className="dark:text-slate-200 dark:bg-slate-800">
         <div className="flex flex-col items-center justify-center mx-6 lg:mx-8">
           {children}
         </div>

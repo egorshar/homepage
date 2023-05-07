@@ -1,8 +1,9 @@
-import React from 'react';
+import Image from 'next/image';
 
 import SocialProfiles from '../components/SocialProfiles/SocialProfiles';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import Link from 'next/link';
 
 export default function Page({ params }) {
   return (
@@ -11,12 +12,12 @@ export default function Page({ params }) {
 
       <div className='mt-6 max-w-2xl lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8'>
         <div className='pb-2 lg:col-span-2 lg:col-start-1 lg:pb-16 lg:pr-24'>
-          <p className='mb-4'>
+          <p>
             Меня зовут Егор Шарапов. Я frontend-разработчик с более чем 10-летним
             опытом.
           </p>
 
-          <p className='mb-4'>
+          <p>
             Последние{' '}
             {Math.floor(
               (Date.now() - Number(new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)'))) /
@@ -29,7 +30,7 @@ export default function Page({ params }) {
             .
           </p>
 
-          <p className='mb-4'>
+          <p>
             До этого пару лет (с 2010) работал в одной из ведущих веб-студий России{' '}
             <a
               href='https://www.google.com/search?q=site%3Aqsoft.ru+%D0%B5%D0%B3%D0%BE%D1%80+%D1%88%D0%B0%D1%80%D0%B0%D0%BF%D0%BE%D0%B2'
@@ -47,13 +48,18 @@ export default function Page({ params }) {
             .
           </p>
 
-          <p className='mb-4'>
+          <p>
             В свободное время я экспериментирую с технологиями и фреймворками (от
-            Arduino до react-native), редко пишу в{' '}
-            <a href='https://t.me/opg_dev' target='_blank' rel='noopener nofollow'>
-              телеграм канал
-            </a>
-            .
+            Arduino до react-native), пишу в телеграм канал:
+          </p>
+
+          <p>
+            {/*<Link href="/feed" className="no-underline">*/}
+            <Link href="https://t.me/opg_dev" className="no-underline">
+              <button className='flex w-full items-center justify-center rounded-md border border-transparent bg-black px-8 py-3 text-base font-medium text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 dark:bg-slate-200 dark:text-slate-800 dark:hover:bg-slate-400 dark:focus:ring-slate-400 dark:focus:ring-offset-slate-800'>
+                <Image src="/static/channel.jpeg" width={32} height={32} className="rounded-full mr-2" alt="Организованная Программерская Группировка" />Организованная Программерская Группировка
+              </button>
+            </Link>
           </p>
 
           <p>
@@ -75,7 +81,7 @@ export default function Page({ params }) {
         </div>
       </div>
 
-      <Footer lang="ru" />
+      <Footer lang='ru' />
     </>
   );
 };
