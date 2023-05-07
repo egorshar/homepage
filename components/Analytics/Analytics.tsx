@@ -1,5 +1,6 @@
 'use client';
 
+import { isFunction } from 'lodash';
 import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -9,7 +10,7 @@ import { GOOGLE_ANALYTICS_ID } from '../../utils/constants';
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageView = (url) => {
-  if (isDev()) return;
+  if (isDev() || !isFunction(window.gtag)) return;
 
   window.gtag('config', GOOGLE_ANALYTICS_ID, {
     page_path: url,
@@ -18,7 +19,7 @@ export const pageView = (url) => {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const event = ({ action, category, label, value }) => {
-  if (isDev()) return;
+  if (isDev() || !isFunction(window.gtag)) return;
 
   window.gtag('event', action, {
     event_category: category,
