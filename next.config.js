@@ -4,10 +4,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 const nextConfig = {
-  exportPathMap: function() {
-    return {
-      '/': { page: '/' },
-    };
+  experimental: {
+    appDir: true,
   },
 };
 

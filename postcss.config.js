@@ -1,11 +1,6 @@
 module.exports = {
-  plugins: [
-    'autoprefixer',
-    [
-      'cssnano',
-      {
-        preset: 'default'
-      }
-    ]
-  ]
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
 }
