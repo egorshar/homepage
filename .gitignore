@@ -1,4 +1,5 @@
 .env
 .next
+.idea
 bundles
 node_modules
