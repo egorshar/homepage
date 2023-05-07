@@ -22,6 +22,7 @@ const getTelegramPosts = cache(async () => {
   return await client.invoke(
     new Api.channels.GetMessages({
       channel: process.env.CHANNEL_NAME,
+      // @ts-ignore
       id: LATEST_TELEGRAM_POSTS || [],
     }),
   );
@@ -31,7 +32,7 @@ export const GET = async () => {
   try {
     const result = await getTelegramPosts();
 
-    // cache for a week
+    // @ts-ignore
     return NextResponse.json(map(result.messages, (message) => pick(message, 'date', 'message', 'entities', 'media')));
   } catch (e) {
     return NextResponse.json({ error: 'failed to load data' }, { status: 500 });
