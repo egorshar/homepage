@@ -22,10 +22,10 @@ const LogoWithIndex = () => {
   return (
     pathname !== '/' ? (
       <Link href='/' className='outline-0 shadow-none'>
-        <Logo isIndex={false} />
+        <Logo />
       </Link>
     ) : (
-      <Logo isIndex />
+      <Logo />
     )
   );
 };
