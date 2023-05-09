@@ -36,7 +36,7 @@ export default function Analytics() {
     pageView(pathname);
   }, [pathname, searchParams]);
 
-  if (!isDev()) {
+  if (isDev()) {
     return null;
   }
 
