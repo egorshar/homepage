@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google';
 import { cookies } from 'next/headers';
 
-import Analytics from '../components/Analytics/Analytics';
+import Analytics from '@/components/Analytics/Analytics';
 
 import './global.css';
 

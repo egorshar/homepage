@@ -2,11 +2,13 @@
 
 import { isFunction } from 'lodash';
 import { useEffect } from 'react';
+import { measure } from 'perfninja';
+
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
 
-import { isDev } from '../../utils';
-import { GOOGLE_ANALYTICS_ID } from '../../utils/constants';
+import { isDev } from '@/utils/index';
+import { GOOGLE_ANALYTICS_ID } from '@/utils/constants';
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageView = (url) => {
@@ -27,6 +29,12 @@ export const event = ({ action, category, label, value }) => {
     value: value,
   });
 };
+
+if (!isDev()) {
+  measure('9bc8d44b-b8b6-49e2-8aca-197868adbb80', {
+    markName: 'requestStart'
+  })
+}
 
 export default function Analytics() {
   const pathname = usePathname();
