@@ -3,6 +3,7 @@
 import { isFunction } from 'lodash';
 import { useEffect } from 'react';
 import { measure } from 'perfninja';
+import LogRocket from 'logrocket'
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -33,7 +34,9 @@ export const event = ({ action, category, label, value }) => {
 if (!isDev()) {
   measure('9bc8d44b-b8b6-49e2-8aca-197868adbb80', {
     markName: 'requestStart'
-  })
+  });
+
+  LogRocket.init('x2revp/homepage');
 }
 
 export default function Analytics() {
