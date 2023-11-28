@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { measure } from 'perfninja';
 import LogRocket from 'logrocket'
 import rg4js from 'raygun4js';
+import Appsignal from "@appsignal/javascript"
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -41,6 +42,8 @@ if (!isDev()) {
 
   rg4js('apiKey', 'ZeoWf9o9pWBJ1PDE5B5Jcw');
   rg4js('enablePulse', true);
+
+  new Appsignal({ key: "fe23c35d-85fa-4eeb-b1b2-756e5af14fb9" })
 }
 
 export default function Analytics() {

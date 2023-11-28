@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/egorshar/egorshar.github.io#readme",
   "dependencies": {
+    "@appsignal/javascript": "^1.3.28",
     "@formatjs/intl-localematcher": "^0.2.32",
     "@react-spring/three": "^9.1.1",
     "@react-three/drei": "^4.1.8",
