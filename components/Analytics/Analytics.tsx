@@ -4,6 +4,7 @@ import { isFunction } from 'lodash';
 import { useEffect } from 'react';
 import { measure } from 'perfninja';
 import LogRocket from 'logrocket'
+import rg4js from 'raygun4js';
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -37,6 +38,9 @@ if (!isDev()) {
   });
 
   LogRocket.init('x2revp/homepage');
+
+  rg4js('apiKey', 'ZeoWf9o9pWBJ1PDE5B5Jcw');
+  rg4js('enablePulse', true);
 }
 
 export default function Analytics() {
