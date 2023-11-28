@@ -32,6 +32,7 @@
     "negotiator": "^0.6.3",
     "next": "^13.5.4",
     "perfninja": "^1.0.3",
+    "raygun4js": "^2.28.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-use": "^17.4.0",
