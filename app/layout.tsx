@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html className={`${inter.className} ${['light', 'dark'].indexOf(theme) > -1 ? theme : ''}`}>
       <body className="dark:text-slate-200 dark:bg-slate-800">
-        <div className="flex flex-col items-center justify-center mx-6 lg:mx-8">
+        <div className="flex flex-col items-center justify-center mx-6 lg:mx-8 min-h-screen max-h-[1000px]">
           {children}
         </div>
       </body>
