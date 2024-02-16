@@ -9,7 +9,7 @@ export default function Page() {
     <>
       <Header lang="en"/>
 
-      <div className='mt-6 max-w-2xl lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 mb-auto'>
+      <div className='max-w-2xl lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 mb-auto'>
         <div className='pb-2 lg:col-span-2 lg:col-start-1 lg:pb-16 lg:pr-24'>
           <p className='mb-4'>
             My name is Egor Sharapov. I&apos;m a frontend developer with more than 10

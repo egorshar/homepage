@@ -10,7 +10,7 @@ export default function Page({ params }) {
     <>
       <Header lang={params.lang} />
 
-      <div className='mt-6 max-w-2xl lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 mb-auto'>
+      <div className='max-w-2xl lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 mb-auto'>
         <div className='pb-2 lg:col-span-2 lg:col-start-1 lg:pb-16 lg:pr-24'>
           <p>
             Меня зовут Егор Шарапов. Я frontend-разработчик с более чем 10-летним
