@@ -23,8 +23,8 @@ export default function Page() {
               (1000 * 60 * 60 * 24 * 30 * 12),
             )}{' '}
             (OMG) years I have been working at{' '}
-            <a href='https://amocrm.com' target='_blank' rel='noopener nofollow'>
-              amoCRM
+            <a href='https://www.kommo.com' target='_blank' rel='noopener nofollow'>
+              Kommo
             </a>
             .
           </p>
@@ -53,16 +53,8 @@ export default function Page() {
 
           <p>
             Besides programming I like football. Before university I have played
-            football at the Youth sports school level. Most recently &mdash; at the
-            amateur level in{' '}
-            <a
-              href='https://training.cityfootball.ru/player/view/134522'
-              target='_blank'
-              rel='noopener nofollow'
-            >
-              CityFootball
-            </a>{' '}
-            Moscow.
+            football at the Youth sports school level. Now I go in for fitness
+            to stay in a good shape.
           </p>
         </div>
 

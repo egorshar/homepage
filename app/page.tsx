@@ -72,7 +72,7 @@ export default function Page({ params }) {
             >
               CityFootball
             </a>
-            .
+            . На данный момент просто хожу в зал, чтобы держать себя в хорошей форме.
           </p>
         </div>
 
