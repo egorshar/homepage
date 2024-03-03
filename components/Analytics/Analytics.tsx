@@ -31,7 +31,7 @@ export const event = ({ action, category, label, value }) => {
 };
 
 pfInit({
-  endpoint: 'https://perfninja.com/log',
+  endpoint: 'https://www.perfninja.com/log',
 });
 
 pfMeasure('9bc8d44b-b8b6-49e2-8aca-197868adbb80', {
