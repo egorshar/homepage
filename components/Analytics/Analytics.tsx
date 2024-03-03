@@ -2,10 +2,7 @@
 
 import { isFunction } from 'lodash';
 import { useEffect } from 'react';
-import { measure } from 'perfninja';
-import LogRocket from 'logrocket'
-import rg4js from 'raygun4js';
-import Appsignal from "@appsignal/javascript"
+import { init as pfInit, measure as pfMeasure } from 'perfninja';
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -33,18 +30,14 @@ export const event = ({ action, category, label, value }) => {
   });
 };
 
-if (!isDev()) {
-  measure('9bc8d44b-b8b6-49e2-8aca-197868adbb80', {
-    markName: 'requestStart'
-  });
+pfInit({
+  endpoint: 'https://perfninja.com/log',
+});
 
-  LogRocket.init('x2revp/homepage');
-
-  rg4js('apiKey', 'ZeoWf9o9pWBJ1PDE5B5Jcw');
-  rg4js('enablePulse', true);
-
-  new Appsignal({ key: "fe23c35d-85fa-4eeb-b1b2-756e5af14fb9" })
-}
+pfMeasure('9bc8d44b-b8b6-49e2-8aca-197868adbb80', {
+  markName: 'responseEnd',
+  experiment: 'initial commit'
+});
 
 export default function Analytics() {
   const pathname = usePathname();

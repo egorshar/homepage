@@ -23,7 +23,7 @@ export function middleware(request) {
     (pathname !== '/' && pathnameIsMissingLocale)
   ) {
     return NextResponse.redirect(
-      new URL(`/${locale}/${pathname}`, request.url),
+      new URL(`/${locale}${pathname}`, request.url),
     );
   }
 }
