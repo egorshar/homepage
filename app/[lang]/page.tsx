@@ -17,12 +17,12 @@ export default function Page() {
           </p>
 
           <p className='mb-4'>
-            Over the last{' '}
+            For the last{' '}
             {Math.floor(
-              (Date.now() - Number(new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)'))) /
+              (Number(new Date('Fri May 17 2024 20:00 GMT+0300 (MSK)')) - Number(new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)'))) /
               (1000 * 60 * 60 * 24 * 30 * 12),
             )}{' '}
-            (OMG) years I have been working at{' '}
+            (OMG) years I have worked at{' '}
             <a href='https://www.kommo.com' target='_blank' rel='noopener nofollow'>
               Kommo
             </a>

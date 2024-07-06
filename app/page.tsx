@@ -20,10 +20,10 @@ export default function Page({ params }) {
           <p>
             Последние{' '}
             {Math.floor(
-              (Date.now() - Number(new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)'))) /
+              (Number(new Date('Fri May 17 2024 20:00 GMT+0300 (MSK)')) - Number(new Date('Sat Sep 15 2012 11:34:49 GMT+0300 (MSK)'))) /
               (1000 * 60 * 60 * 24 * 30 * 12),
             )}{' '}
-            (OMG) лет я работаю в{' '}
+            (OMG) лет я работал в{' '}
             <a href='https://amocrm.ru' target='_blank' rel='noopener nofollow'>
               amoCRM
             </a>
