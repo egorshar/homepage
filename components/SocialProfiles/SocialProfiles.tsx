@@ -35,9 +35,8 @@ export default function SocialProfiles({ t }: { t: Record<string, any> }) {
       <SplitText text={t.social.header} />
       <div className='mt-8 flex justify-between flex-col md:flex-row'>
         {socials.map((social) => (
-          <AnimatedText>
+          <AnimatedText key={social.url}>
             <a
-              key={social.url}
               href={social.url}
               className='group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200'
               target='_blank'

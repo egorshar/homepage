@@ -35,9 +35,8 @@ export default function Footer({ t }: { t: Record<string, any> }) {
       <SplitText text={t.footer.header} />
       <div className='mt-8 flex justify-between flex-col md:flex-row'>
         {LINKS.map((link) => (
-          <AnimatedText>
+          <AnimatedText key={link.url}>
             <a
-              key={link.url}
               href={link.url}
               className='group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200'
               target='_blank'
