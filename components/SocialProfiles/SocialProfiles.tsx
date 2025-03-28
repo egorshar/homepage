@@ -4,6 +4,7 @@ import GithubIcon from './Icons/Github';
 import LinkedInIcon from './Icons/LinkedIn';
 import NPMIcon from './Icons/NPM';
 import TelegramIcon from './Icons/Telegram';
+import AnimatedText from '@/components/AnimatedText/AnimatedText';
 
 const socials = [
   {
@@ -11,9 +12,9 @@ const socials = [
     name: 'TELEGRAM',
     icon: <TelegramIcon />,
   },
-  { 
-    url: 'https://github.com/egorshar', 
-    name: 'GITHUB', 
+  {
+    url: 'https://github.com/egorshar',
+    name: 'GITHUB',
     icon: <GithubIcon />,
   },
   {
@@ -28,26 +29,29 @@ const socials = [
   },
 ];
 
-export default function SocialProfiles({ t }: { t: Record<string, any>}) {
+export default function SocialProfiles({ t }: { t: Record<string, any> }) {
   return (
-    <div className="w-full py-12 px-8">
+    <div className='w-full py-12 px-8'>
       <SplitText text={t.social.header} />
-      <div className="mt-8 flex justify-between flex-col md:flex-row">
+      <div className='mt-8 flex justify-between flex-col md:flex-row'>
         {socials.map((social) => (
-          <a
-            key={social.url}
-            href={social.url}
-            className="group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
-            target="_blank"
-            rel="nofollow noopener"
-          >
-            <span className="w-6 h-6 mr-3 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200">
+          <AnimatedText>
+            <a
+              key={social.url}
+              href={social.url}
+              className='group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200'
+              target='_blank'
+              rel='nofollow noopener'
+            >
+            <span
+              className='w-6 h-6 mr-3 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200'>
               {social.icon}
             </span>
-            <span className="text-3xl font-bold uppercase">
+              <span className='text-3xl font-bold uppercase'>
               {social.name}
             </span>
-          </a>
+            </a>
+          </AnimatedText>
         ))}
       </div>
     </div>

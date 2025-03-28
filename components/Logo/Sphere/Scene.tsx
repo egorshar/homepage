@@ -24,16 +24,14 @@ export default function Scene({ theme: initialTheme, toggleTheme }) {
     canvas.width = 512;
     canvas.height = 512;
 
-    // Настраиваем стиль текста
     ctx.fillStyle = 'transparent';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#fff';
-    ctx.font = 'bold 150px Inter';
+    ctx.font = 'bold 150px Arial';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
     ctx.fillText('sh', canvas.width / 4, canvas.height / 2);
 
-    // Создаем текстуру
     const texture = new THREE.CanvasTexture(canvas);
     texture.needsUpdate = true;
 

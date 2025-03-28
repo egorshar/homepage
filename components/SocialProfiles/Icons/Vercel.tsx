@@ -1,7 +1,7 @@
 export default function VercelIcon () {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <path fillRule="evenodd" d="M256,48,496,464H16Z" />
+    <svg width="480" height="416" viewBox="0 0 480 416" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M240 0L480 416H0L240 0Z" fill="black" />
     </svg>
   )
 };

@@ -4,11 +4,12 @@ import NextJSIcon from '@/components/SocialProfiles/Icons/NextJS';
 import TailwindCSSIcon from '@/components/SocialProfiles/Icons/TailwindCSS';
 import VercelIcon from '@/components/SocialProfiles/Icons/Vercel';
 import CursorAIIcon from '@/components/SocialProfiles/Icons/CursorAI';
+import AnimatedText from '@/components/AnimatedText/AnimatedText';
 
 const LINKS = [
   {
     url: 'https://cursor.com/',
-    text: <><span>VIBE</span><span className="hidden lg:inline">&nbsp;CODING</span></>,
+    text: <><span>VIBE</span><span className='hidden lg:inline'>&nbsp;CODING</span></>,
     icon: <CursorAIIcon />,
   },
   {
@@ -19,36 +20,38 @@ const LINKS = [
   {
     url: 'https://tailwindcss.com/',
     text: 'Tailwind CSS',
-    icon: <TailwindCSSIcon />
+    icon: <TailwindCSSIcon />,
   },
   {
     url: 'https://vercel.com/',
     text: 'Vercel',
-    icon: <VercelIcon />
-  }
+    icon: <VercelIcon />,
+  },
 ];
 
-export default function Footer({ t }: { t: Record<string, any>}) {
+export default function Footer({ t }: { t: Record<string, any> }) {
   return (
-    <div className="py-12 w-full px-8">
+    <div className='py-12 w-full px-8'>
       <SplitText text={t.footer.header} />
-      <div className="mt-8 flex justify-between flex-col md:flex-row">
+      <div className='mt-8 flex justify-between flex-col md:flex-row'>
         {LINKS.map((link) => (
-          <a
-            key={link.url}
-            href={link.url}
-            className='group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200'
-            target='_blank'
-            rel='nofollow noopener'
-          >
+          <AnimatedText>
+            <a
+              key={link.url}
+              href={link.url}
+              className='group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200'
+              target='_blank'
+              rel='nofollow noopener'
+            >
             <span
               className='w-6 h-6 mr-3 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200'>
               {link.icon}
             </span>
-            <span className='text-3xl font-bold uppercase'>
+              <span className='text-3xl font-bold uppercase'>
               {link.text}
             </span>
-          </a>
+            </a>
+          </AnimatedText>
         ))}
       </div>
     </div>

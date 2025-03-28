@@ -22,10 +22,10 @@ export default function ParallaxHero({ t }: { t: Record<string, any> }) {
   const imageY = useTransform(scrollYProgress, [0, 0.5], ['0%', '-20%']);
 
   return (
-    <div ref={containerRef} className='relative md:h-[200vh] h-[100vh]'>
-      <div className='sticky top-0 md:h-[80vh] h-[73vh] flex justify-center overflow-hidden'>
+    <div ref={containerRef} className='relative md:h-[1900px] h-[940px]'>
+      <div className='sticky top-0 md:h-[750px] h-[690px] flex justify-center overflow-hidden'>
         <div className='relative w-full max-w-7xl mx-auto px-4 text-center'>
-          <SplitText containerClassName='justify-center lg:mt-8 md:mt-10 mt-10 w-1/2 md:w-full mx-auto' text={t.title} style={{ opacity, scale }} />
+          <SplitText containerClassName='justify-center lg:mt-8 md:mt-10 mt-10 w-[380px] md:w-full mx-auto' text={t.title} style={{ opacity, scale }} />
         </div>
 
         <motion.div
