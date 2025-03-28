@@ -15,7 +15,6 @@ export default function ParallaxHero({ t }: { t: Record<string, any> }) {
   const [hovered, setHovered] = useState(false);
   const [hoveredBlur, setHoveredBlur] = useState(false);
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
   const imageScale = useTransform(scrollYProgress, [0, 0.5], [1, 1.2]);
