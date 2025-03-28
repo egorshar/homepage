@@ -2,8 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/utils/*": ["utils/*"]
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ]
     },
     "lib": [
       "dom",
@@ -27,7 +31,8 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -35,7 +40,9 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "types": ["@types/google.analytics"],
+  "types": [
+    "@types/google.analytics"
+  ],
   "exclude": [
     "node_modules"
   ]

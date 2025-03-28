@@ -1,7 +1,4 @@
-import map from 'lodash/map';
-
-import Image from 'next/image';
-import Link from 'next/link';
+import SplitText from '@/components/SplitText/SplitText';
 
 import GithubIcon from './Icons/Github';
 import LinkedInIcon from './Icons/LinkedIn';
@@ -11,13 +8,17 @@ import TelegramIcon from './Icons/Telegram';
 const socials = [
   {
     url: 'https://t.me/egorshar',
-    name: 'Telegram',
+    name: 'TELEGRAM',
     icon: <TelegramIcon />,
   },
-  { url: 'https://github.com/egorshar', name: 'GitHub', icon: <GithubIcon /> },
+  { 
+    url: 'https://github.com/egorshar', 
+    name: 'GITHUB', 
+    icon: <GithubIcon />,
+  },
   {
     url: 'https://www.linkedin.com/in/egor-sharapov-18a7a262/',
-    name: 'Linked In',
+    name: 'LINKED IN',
     icon: <LinkedInIcon />,
   },
   {
@@ -27,34 +28,28 @@ const socials = [
   },
 ];
 
-export default function SocialProfiles() {
+export default function SocialProfiles({ t }: { t: Record<string, any>}) {
   return (
-    <>
-      <div className='aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 overflow-hidden rounded-lg mb-1 relative'>
-        <Image src='/static/egor.webp' className='object-left' width={1080} height={1350} alt='Me' />
-
-        <div className='absolute bottom-0 bg-white bg-opacity-50 px-2 rounded-tr-lg'>
-          <Link href='https://www.google.com/maps?q=45.81543,9.08026' className='text-slate-500 text-xs' target="_blank">
-            📍 Porto di Como, 2018
-          </Link>
-        </div>
-      </div>
-
-      <ul className='p-0 mt-4'>
-        {map(socials, (social) => (
-          <li className='flex mb-2 last:mb-0' key={social.url}>
-            <a
-              href={social.url}
-              className='inline-flex items-center'
-              target='_blank'
-              rel='nofollow noopener'
-            >
-              <span className='flex w-4 h-4 mr-1.5'>{social.icon}</span>
+    <div className="w-full py-12 px-8">
+      <SplitText text={t.social.header} />
+      <div className="mt-8 flex justify-between flex-col md:flex-row">
+        {socials.map((social) => (
+          <a
+            key={social.url}
+            href={social.url}
+            className="group flex items-center hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+            target="_blank"
+            rel="nofollow noopener"
+          >
+            <span className="w-6 h-6 mr-3 text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200">
+              {social.icon}
+            </span>
+            <span className="text-3xl font-bold uppercase">
               {social.name}
-            </a>
-          </li>
+            </span>
+          </a>
         ))}
-      </ul>
-    </>
+      </div>
+    </div>
   );
-};
+}

@@ -16,6 +16,33 @@ export default function Scene({ theme: initialTheme, toggleTheme }) {
   const [theme, setTheme] = useState(initialTheme);
   const [down, setDown] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [textTexture, setTextTexture] = useState(null);
+
+  const createTextTexture = () => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = 512;
+    canvas.height = 512;
+
+    // Настраиваем стиль текста
+    ctx.fillStyle = 'transparent';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 150px Inter';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('sh', canvas.width / 4, canvas.height / 2);
+
+    // Создаем текстуру
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.needsUpdate = true;
+
+    setTextTexture(texture);
+  };
+
+  useEffect(() => {
+    createTextTexture();
+  }, [theme]);
 
   // Change cursor on hovered state
   useEffect(() => {
@@ -57,7 +84,7 @@ export default function Scene({ theme: initialTheme, toggleTheme }) {
       </PerspectiveCamera>
 
       <Suspense fallback={null}>
-        <a.mesh
+        <a.group
           ref={sphere}
           scale={wobble}
           onPointerOver={() => setHovered(true)}
@@ -68,18 +95,20 @@ export default function Scene({ theme: initialTheme, toggleTheme }) {
             setTheme(theme === 'dark' ? 'light' : 'dark');
             toggleTheme();
           }}>
-          <sphereGeometry args={[1, 64, 64]} attach='geometry' />
-
-          <AnimatedMaterial
-            color={color}
-            envMapIntensity={env}
-            clearcoat={coat}
-            clearcoatRoughness={0}
-            metalness={1}
-            distort={hovered ? 0.4 : 0}
-          />
-        </a.mesh>
-        <Environment files="./static/puresky_1k.hdr" />
+          <mesh>
+            <sphereGeometry args={[1, 64, 64]} attach='geometry' />
+            <AnimatedMaterial
+              color="#fff"
+              envMapIntensity={env}
+              clearcoat={1}
+              clearcoatRoughness={0}
+              metalness={1}
+              distort={hovered ? 0.4 : 0}
+              map={textTexture}
+            />
+          </mesh>
+        </a.group>
+        <Environment files="./static/kloofendal_misty_morning_puresky_1k.hdr" />
         <ContactShadows
           rotation={[Math.PI / 2, 0, 0]}
           position={[0, -1.2, 0]}

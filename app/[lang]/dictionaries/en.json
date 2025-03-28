@@ -1,0 +1,38 @@
+{
+  "title": "Frontend Head",
+  "translate_flag": "🪆",
+  "about": {
+    "header": "About Me",
+    "my_name_is": "My name is Egor Sharapov",
+    "my_name_description": ", I'm a Frontend Architect with 15+ years of experience, having grown a team from 1 to 20+ people and built the UI infrastructure for one of the leading CRM products on the Russian market.",
+    "expert": "Expert in React, frontend application architecture, team scaling, and implementing modern development practices.",
+    "good_man": "And just a good man.",
+    "hobby": "Outside of development, I’m into football. Before university, I played at a youth academy level, and in recent years — at an amateur level in",
+    "fitness": "These days I just go to the gym to stay in good shape."
+  },
+  "projects": {
+    "header": "Projects",
+    "opg": "Organized Programmers Group",
+    "opg_short": "OPG"
+  },
+  "experience": {
+    "header": "Experience",
+    "current": "Currently leading frontend in one of the fastest-growing all-in-one solutions for the US cannabis retail market",
+    "amo1": "Led the frontend development of a messenger from scratch during the first year — from MVP to public release",
+    "amo2": "Later stepped away from the messenger to focus on the main product — amoCRM",
+    "amo3": "Returned in 2022 and replaced the Qt desktop app with Electron, significantly reducing time-to-market for new features",
+    "amo4": "Took on the role of team lead and mentor: coordinated the work of 2 frontend developers",
+    "amocrm1": "Grew the frontend team from 5 to 20+ developers by establishing hiring, mentoring, and onboarding processes",
+    "amocrm2": "Successfully migrated from require.js to webpack, reducing SPA load time by 30–40%",
+    "amocrm3": "Replaced an outdated stack (Backbone + Bower) with a modern one (React + TypeScript + npm), simplifying maintenance and speeding up feature delivery",
+    "amocrm4": "Developed the drag’n’drop Salesbot Designer library — now a key marketing feature of amoCRM used by thousands of users",
+    "first": "Here I gained valuable experience developing web projects in JavaScript and PHP, got introduced to teamwork and basic production processes",
+    "first2": "It was at QSOFT that I realized I wanted to pursue frontend — and began diving deeper into technologies, UX, and interface architecture"
+  },
+  "social": {
+    "header": "Contact"
+  },
+  "footer": {
+    "header": "Built with"
+  }
+}

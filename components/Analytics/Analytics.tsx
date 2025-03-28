@@ -2,7 +2,6 @@
 
 import { isFunction } from 'lodash';
 import { useEffect } from 'react';
-import { init as pfInit, measure as pfMeasure } from 'perfninja';
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -29,15 +28,6 @@ export const event = ({ action, category, label, value }) => {
     value: value,
   });
 };
-
-pfInit({
-  endpoint: 'https://www.perfninja.com/log',
-});
-
-pfMeasure('9bc8d44b-b8b6-49e2-8aca-197868adbb80', {
-  markName: 'responseEnd',
-  experiment: 'initial commit'
-});
 
 export default function Analytics() {
   const pathname = usePathname();
