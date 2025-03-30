@@ -42,13 +42,13 @@ export default function Footer({ t }: { t: Record<string, any> }) {
               target='_blank'
               rel='nofollow noopener'
             >
-            <span
-              className='w-6 h-6 mr-3 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200'>
-              {link.icon}
-            </span>
+              <span
+                className='w-6 h-6 mr-3 flex items-center justify-center text-black dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-200'>
+                {link.icon}
+              </span>
               <span className='text-3xl font-bold uppercase'>
-              {link.text}
-            </span>
+                {link.text}
+              </span>
             </a>
           </AnimatedText>
         ))}
