@@ -35,7 +35,6 @@ export default function About({ t }: { t: Record<string, any> }) {
                     >
                       CityFootball
                     </a>
-                    .
                   </p>
                   <p className='text-slate-600 dark:text-slate-400'>{t.about.fitness}</p>
                 </AnimatedText>
