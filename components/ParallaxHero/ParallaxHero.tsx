@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 
@@ -46,8 +46,9 @@ export default function ParallaxHero({ t }: { t: Record<string, any> }) {
             >
               <Image
                 src='/static/egor-toy.webp'
+                width={499}
+                height={400}
                 className={'absolute object-cover w-full h-full rounded-3xl'}
-                fill
                 priority
                 alt='Me'
               />
@@ -55,8 +56,9 @@ export default function ParallaxHero({ t }: { t: Record<string, any> }) {
 
             <Image
               src='/static/egor.webp'
-              className='object-cover w-full h-full rounded-3xl'
-              fill
+              className='relative z-1 object-cover w-full h-full rounded-3xl'
+              width={499}
+              height={400}
               priority
               alt='Me'
             />
@@ -74,8 +76,9 @@ export default function ParallaxHero({ t }: { t: Record<string, any> }) {
           >
             <Image
               src='/static/egor-toy.webp'
-              className='object-cover w-full h-full rounded-3xl'
-              fill
+              width={499}
+              height={400}
+              className='relative z-2 object-cover w-full h-full rounded-3xl'
               priority
               alt='Me'
             />

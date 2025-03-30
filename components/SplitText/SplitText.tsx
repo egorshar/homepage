@@ -1,13 +1,12 @@
 'use client';
 
 import { animate, stagger, inView } from 'motion';
-import { motion } from 'motion/react';
+import { HTMLMotionProps, motion } from 'motion/react';
 import { splitText } from 'motion-plus';
-import React, { CSSProperties, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { cn } from '@/utils/index';
-import { HTMLMotionProps } from 'framer-motion';
 
-interface SplitTextProps extends HTMLMotionProps<"div"> {
+interface SplitTextProps extends HTMLMotionProps<'div'> {
   containerClassName?: string;
   className?: string;
   text: string;
@@ -47,13 +46,14 @@ export default function SplitText({ containerClassName, className, style, text }
             delay: stagger(0.05),
           },
         );
-      }, { amount: 0.1, margin: "-100px" });
+      }, { amount: 0.1, margin: '-100px' });
     });
   }, []);
 
   return (
     <motion.div className={cn('flex invisible w-full', containerClassName)} ref={containerRef} style={style}>
-      <h1 className={cn('lg:text-[6rem] md:text-[5rem] text-[3rem] w-full uppercase font-bold leading-none mb-0', className)}>
+      <h1
+        className={cn('lg:text-[6rem] md:text-[5rem] text-[3rem] w-full uppercase font-bold leading-none mb-0', className)}>
         {text}
       </h1>
     </motion.div>

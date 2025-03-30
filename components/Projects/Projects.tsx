@@ -12,7 +12,7 @@ export default function Projects({ t }: { t: Record<string, any>}) {
           <Link href='https://t.me/opg_dev' className='no-underline'>
             <button
               className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'>
-              <Image src='/static/channel.jpeg' width={60} height={60} className='rounded-full mr-5 md:w-[60px]'
+              <Image src='/static/channel.jpeg' width={60} height={60} className='rounded-full mr-5'
                      alt='Organized Programming Group' /><span className="hidden md:inline">{t.projects.opg}</span><span className="inline md:hidden">{t.projects.opg_short}</span>
             </button>
           </Link>
@@ -21,7 +21,7 @@ export default function Projects({ t }: { t: Record<string, any>}) {
           <Link href='https://how-much.in' className='no-underline'>
             <button
               className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#ddd7ff] px-8 py-3 text-3xl font-bold uppercase text-black hover:bg-[#c8c3e8] focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'>
-              <Image src='/static/howmuchin.webp' width={60} height={60} className=' mr-5 md:w-[60px]'
+              <Image src='/static/howmuchin.webp' width={60} height={60} className='mr-5'
                      alt='Organized Programming Group' />How Much In
             </button>
           </Link>
