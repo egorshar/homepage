@@ -30,7 +30,7 @@ export default function Projects({ t }: { t: Record<string, any>}) {
           <Link href='https://egorshar.github.io/jquery-ui-sortable-animation/' className='no-underline'>
             <button
               className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#f9f2f4] px-8 py-3 text-3xl font-bold uppercase text-[#c7254e] hover:bg-[#e9e0e3] focus:outline-none focus:ring-2 focus:ring-[#c7254e] focus:ring-offset-2'>
-              ⭐ 21&nbsp;&nbsp;<span className="hidden md:inline">jQueryUI Sortable Animation</span><span className="inline md:hidden">jQUI Sortable</span>
+              ⭐&nbsp;<span className="text-2xl mr-1">21</span>&nbsp;&nbsp;<span className="hidden md:inline">jQueryUI Sortable Animation</span><span className="inline md:hidden">jQUI Sortable</span>
             </button>
           </Link>
         </AnimatedText>
