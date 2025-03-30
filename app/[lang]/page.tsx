@@ -1,5 +1,5 @@
 import Index from '@/components/Index/Index';
-import { getDictionary } from './dictionaries';
+import { getDictionary } from '@/utils/dictionaries';
 
 export default async function Page({ params: { lang } }) {
   const t = await getDictionary(lang);

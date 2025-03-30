@@ -1,11 +1,18 @@
+import { headers } from 'next/headers';
 import Index from '@/components/Index/Index';
-import { getDictionary } from './[lang]/dictionaries';
+import IndexShareware from '@/components/IndexShareware/IndexShareware';
+import { getDictionary } from '@/utils/dictionaries';
+import { isSharewareDomain } from '@/utils/index';
 
 export default async function Page({ params: { lang } }) {
   const t = await getDictionary(lang);
+  const requestHeaders = headers();
+  const host = requestHeaders.get('host') || '';
+  const IndexToRender = isSharewareDomain(host) ? IndexShareware : Index;
+
   return (
     <div className="max-w-7xl pb-40">
-      <Index t={t} locale={lang} />
+      <IndexToRender t={t} locale={lang} />
     </div>
   );
 }
