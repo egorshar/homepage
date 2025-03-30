@@ -6,7 +6,7 @@ export default function Translate({ locale, t }: { locale: 'en' | 'ru', t: Recor
     <div className='w-full py-12 text-center'>
       <AnimatedText>
         <Link href={locale !== 'ru' ? '/ru' : '/'}
-              className='lg:text-[6rem] md:text-[5rem] text-[3rem] -ml-5 mt-2 w-full uppercase font-bold'>
+              className='lg:text-[6rem] md:text-[5rem] text-[3rem] -ml-5 mt-2 w-full uppercase font-bold no-underline'>
           {t.translate_flag}
         </Link>
       </AnimatedText>

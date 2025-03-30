@@ -4,11 +4,11 @@
   "about": {
     "header": "About Me",
     "my_name_is": "My name is Egor Sharapov",
-    "my_name_description": ", I'm a Frontend Architect with 15+ years of experience, having grown a team from 1 to 20+ people and built the UI infrastructure for one of the leading CRM products on the Russian market.",
-    "expert": "Expert in React, frontend application architecture, team scaling, and implementing modern development practices.",
-    "good_man": "And just a good man.",
-    "hobby": "Outside of development, I’m into football. Before university, I played at a youth academy level, and in recent years — at an amateur level in",
-    "fitness": "These days I just go to the gym to stay in good shape."
+    "my_name_description": ", I'm a Frontend Architect with 15+ years of experience, having grown a team from 1 to 20+ people and built the UI infrastructure for one of the leading CRM products on the Russian market",
+    "expert": "Expert in React, frontend application architecture, team scaling, and implementing modern development practices",
+    "good_man": "And just a good man",
+    "hobby": "Outside of development, I’m into football, before university, I played at a youth academy level and in recent years — at an amateur level in",
+    "fitness": "These days I just go to the gym to stay in good shape"
   },
   "projects": {
     "header": "Projects",
