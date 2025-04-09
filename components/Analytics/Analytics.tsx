@@ -2,6 +2,7 @@
 
 import { isFunction } from 'lodash';
 import { useEffect } from 'react';
+import { RM } from '@request-metrics/browser-agent';
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
@@ -36,6 +37,14 @@ export default function Analytics() {
   useEffect(() => {
     pageView(pathname);
   }, [pathname, searchParams]);
+
+  useEffect(() => {
+    if (!isDev()) {
+      RM.install({
+        token: "b9ew7xq:r6xr4vm"
+      });
+    }
+  }, []);
 
   if (isDev()) {
     return null;
