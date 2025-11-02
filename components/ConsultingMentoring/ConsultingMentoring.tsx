@@ -115,18 +115,19 @@ export default function ConsultingMentoring() {
             <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
               <li>Постоянная работа в асинхронном формате через telegram + github.</li>
               <li>4 созвона в месяц по полтора часа.</li>
-              <li>Давайте проведем онбординг-звонок и там обсудим детальнее, это бесплатно.</li>
+              <li>Базово 499$ в месяц.</li>
+              <li>Introduction-созвон - бесплатно, там обсудим детальнее.</li>
             </ul>
           </AnimatedText>
           <AnimatedText className='mt-8 -mx-8'>
             <a
-              href='mailto:i@egorshareware.ru?subject=%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%20%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3'
+              href='https://calendly.com/egorshar/frontend'
               className='no-underline block'
             >
               <button
                 className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
               >
-                499$ в месяц
+                выбрать доступный слот
               </button>
             </a>
           </AnimatedText>
