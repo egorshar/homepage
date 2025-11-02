@@ -34,5 +34,9 @@
   },
   "footer": {
     "header": "Сделано"
+  },
+  "shareware": {
+    "title": "Фронтенд",
+    "title2": "аудит"
   }
 }
