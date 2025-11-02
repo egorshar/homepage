@@ -46,7 +46,7 @@ export default function ConsultingMentoring() {
   return (
     <>
       <Header isShareware={true} />
-      <main className='px-6 md:px-12 lg:px-16 space-y-24'>
+      <main className='px-8 lg:px-16 space-y-24'>
         <section className='pt-16'>
           <SplitText text='FRONTEND МЕНТОРИНГ' />
           <AnimatedText className='mt-6 max-w-3xl text-2xl md:text-[28px] leading-snug text-slate-800 dark:text-slate-200'>
@@ -59,7 +59,7 @@ export default function ConsultingMentoring() {
 
         <section>
           <SplitText text='ЧЕМ ПОМОГУ' />
-          <div className='mt-10 grid gap-6 md:grid-cols-2'>
+          <div className='mt-10 grid gap-6 md:grid-cols-2 -mx-8'>
             {mentoringHighlights.map((highlight, index) => {
               const isWhite = index % 2 === 0;
               return (
@@ -84,7 +84,7 @@ export default function ConsultingMentoring() {
 
         <section>
           <SplitText text='Формат' />
-          <div className='mt-10 grid gap-6 md:grid-cols-3'>
+          <div className='mt-10 grid gap-6 md:grid-cols-3 -mx-8'>
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
                 <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 h-full'>
@@ -109,24 +109,25 @@ export default function ConsultingMentoring() {
         </section>
 
         <section className='pb-8'>
-          <SplitText text='Интересно?' />
+          <SplitText text='Готовы?' />
           <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700'>
             <h3 className='text-2xl font-bold text-slate-900'>Как работаем:</h3>
             <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
               <li>Постоянная работа в асинхронном формате через telegram + github.</li>
               <li>4 созвона в месяц по полтора часа.</li>
-              <li>Давайте проведем онбординг-звонок и там обсудим детальнее, это бесплатно.</li>
+              <li>Базово 499$ в месяц.</li>
+              <li>Introduction-созвон - бесплатно, там обсудим детальнее.</li>
             </ul>
           </AnimatedText>
-          <AnimatedText className='mt-8'>
+          <AnimatedText className='mt-8 -mx-8'>
             <a
-              href='mailto:i@egorshareware.ru?subject=%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%20%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3'
-              className='no-underline'
+              href='https://calendly.com/egorshar/frontend'
+              className='no-underline block'
             >
               <button
                 className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
               >
-                499$ в месяц
+                выбрать доступный слот
               </button>
             </a>
           </AnimatedText>
