@@ -42,13 +42,6 @@ const trustSignals = [
   'Работаем в формате «делаем вместе»: созвоны, ревью, чек-листы и понятные артефакты.',
 ];
 
-const testimonials = [
-  {
-    quote: 'Ушёл с нуля до первого продакшн-лендинга за два месяца. Самое ценное — Егор помог встроить привычку быстро валидировать идеи и не застревать на деталях.',
-    author: 'Алексей, основатель сервиса side-проектов',
-  },
-];
-
 export default function ConsultingMentoring() {
   return (
     <>
@@ -104,9 +97,9 @@ export default function ConsultingMentoring() {
           </div>
         </section>
 
-        <section className='grid gap-6 lg:grid-cols-[3fr_2fr] items-center'>
-          <AnimatedText>
-            <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-900'>
+        <section className='grid gap-6 lg:grid-cols-[3fr_2fr] items-stretch'>
+          <AnimatedText className='h-full'>
+            <div className='flex h-full flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-900'>
               <h2 className='text-2xl font-bold uppercase'>Что получите</h2>
               <ul className='mt-6 space-y-4 text-lg leading-relaxed'>
                 {trustSignals.map((signal) => (
@@ -115,26 +108,14 @@ export default function ConsultingMentoring() {
               </ul>
             </div>
           </AnimatedText>
-          <AnimatedText className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-black px-8 py-10 text-white'>
-            <h2 className='text-2xl font-bold uppercase'>Опора на результат</h2>
-            <p className='mt-4 text-lg leading-relaxed text-slate-200'>
-              Упор на системные изменения: фиксируем чек-листы, регламенты и метрики, чтобы рост не заканчивался на нашем созвоне.
-            </p>
+          <AnimatedText className='h-full'>
+            <div className='flex h-full flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-black px-8 py-10 text-white'>
+              <h2 className='text-2xl font-bold uppercase'>Опора на результат</h2>
+              <p className='mt-4 text-lg leading-relaxed text-slate-200'>
+                Упор на системные изменения: фиксируем чек-листы, регламенты и метрики, чтобы рост не заканчивался на нашем созвоне.
+              </p>
+            </div>
           </AnimatedText>
-        </section>
-
-        <section>
-          <SplitText text='Отзывы' />
-          <div className='mt-10 grid gap-6 md:grid-cols-2'>
-            {testimonials.map((testimonial) => (
-              <AnimatedText key={testimonial.quote}>
-                <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10'>
-                  <p className='text-lg leading-relaxed text-slate-700'>&ldquo;{testimonial.quote}&rdquo;</p>
-                  <span className='mt-6 block text-sm font-semibold uppercase text-slate-500'>{testimonial.author}</span>
-                </div>
-              </AnimatedText>
-            ))}
-          </div>
         </section>
 
         <section>
@@ -142,23 +123,27 @@ export default function ConsultingMentoring() {
           <AnimatedText className='mt-6'>
             <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-800'>
               <p className='text-lg leading-relaxed'>
-                15 лет руковожу фронтендом продуктов уровня amoCRM и ритейла США, строю команды, процессы и архитектуру.
-                Мой персональный сайт —{' '}
+                15 лет руковожу фронтендом продуктов с frontend командами уровня 20+ разработчиков, строю команды, процессы и архитектуру. Подробнее про мой опыт на{' '}
                 <a href='https://egor.sh' target='_blank' rel='noopener noreferrer' className='underline'>
-                  egor.sh
+                  https://egor.sh
                 </a>
-                , там можно посмотреть другие кейсы и подходы.
+                .
               </p>
             </div>
           </AnimatedText>
         </section>
 
         <section className='pb-8'>
-          <SplitText text='Присоединяйтесь' />
+          <SplitText text='работаем?' />
           <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700'>
-            <p>
-              Напишите письмо — обсудим задачи, формат и договоримся о первом созвоне. Отвечу быстро и предложу план, с которым можно стартовать сразу.
-            </p>
+            <div>
+              <h3 className='text-2xl font-bold text-slate-900'>обычный формат работы</h3>
+              <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
+                <li>постоянная работа в асинхронном формате через telegram + github</li>
+                <li>4 созвона в месяц по полтора часа</li>
+                <li>на онбординг-звонке обсудим детальнее</li>
+              </ul>
+            </div>
           </AnimatedText>
           <AnimatedText className='mt-8'>
             <a
@@ -168,7 +153,7 @@ export default function ConsultingMentoring() {
               <button
                 className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
               >
-                Менторинг · договоримся на созвоне
+                499$ в месяц
               </button>
             </a>
           </AnimatedText>

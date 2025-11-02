@@ -2,7 +2,7 @@ import ConsultingMentoring from '@/components/ConsultingMentoring/ConsultingMent
 
 export default async function Page() {
   return (
-    <div className='w-full pb-40'>
+    <div className='max-w-7xl mx-auto pb-40'>
       <ConsultingMentoring />
     </div>
   );
