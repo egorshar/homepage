@@ -53,7 +53,7 @@ export default function SplitText({ containerClassName, className, style, text }
   return (
     <motion.div className={cn('flex invisible w-full', containerClassName)} ref={containerRef} style={style}>
       <h1
-        className={cn('lg:text-[6rem] md:text-[5rem] text-[3rem] w-full uppercase font-bold leading-none mb-0', className)}>
+        className={cn('lg:text-[6rem] md:text-[5rem] text-[3rem] w-full uppercase font-bold leading-none mb-0 whitespace-pre-wrap', className)}>
         {text}
       </h1>
     </motion.div>
