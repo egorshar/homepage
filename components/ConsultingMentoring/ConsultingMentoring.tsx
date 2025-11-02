@@ -55,7 +55,7 @@ export default function ConsultingMentoring() {
       <Header isShareware={true} />
       <main className="px-8 lg:px-16 space-y-24">
         <section className="pt-16">
-          <SplitText text="FRONTEND МЕНТОРИНГ" />
+          <SplitText text="ФРОНТЕНД МЕНТОРИНГ" />
           <AnimatedText className="mt-6 max-w-3xl text-2xl md:text-[28px] leading-snug text-slate-800 dark:text-slate-200">
             <p>
               Менторю разработчиков и команды по фронтенду: от первых шагов без
@@ -74,9 +74,9 @@ export default function ConsultingMentoring() {
               return (
                 <AnimatedText key={highlight.title} className="h-full">
                   <div
-                    className={`h-full rounded-3xl border border-slate-200 dark:border-slate-800 px-8 py-10 transition-colors ${
+                    className={`h-full rounded-3xl border border-slate-100 dark:border-slate-800 px-8 py-10 transition-colors ${
                       isWhite
-                        ? 'bg-white text-slate-900'
+                        ? 'bg-slate-100 text-slate-900'
                         : 'bg-black text-white'
                     }`}
                   >
@@ -100,7 +100,7 @@ export default function ConsultingMentoring() {
           <div className="mt-10 grid gap-6 md:grid-cols-3 -mx-8">
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
-                <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 h-full">
+                <div className="rounded-3xl border border-slate-100 bg-slate-100 dark:border-slate-800 bg-white px-8 py-10 h-full">
                   <span className="text-sm font-semibold text-slate-400 uppercase">
                     Шаг {index + 1}
                   </span>
