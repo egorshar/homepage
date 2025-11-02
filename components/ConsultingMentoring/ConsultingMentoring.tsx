@@ -1,105 +1,92 @@
 import Header from '@/components/Header/Header';
 import SplitText from '@/components/SplitText/SplitText';
 import AnimatedText from '@/components/AnimatedText/AnimatedText';
-import SocialProfiles from '@/components/SocialProfiles/SocialProfiles';
-import Footer from '@/components/Footer/Footer';
 
-const consultingPillars = [
+const mentoringHighlights = [
   {
-    title: 'Продуктовая стратегия',
-    description: 'Собираем сигнал из данных, обратной связи и рынка, чтобы приоритизировать фичи, которые двигают метрики, а не копят техдолг.',
+    title: 'С нуля до продакшена',
+    description: 'Помогаю собрать фундамент фронтенда: от базового HTML/CSS/JS до первого сайта, который выходит в прод.',
   },
   {
-    title: 'Системы и процессы',
-    description: 'Отстраиваем прозрачные процессы разработки и коммуникаций, чтобы команда работала в едином ритме и без микроменеджмента.',
+    title: 'Практика на ваших задачах',
+    description: 'Работаем поверх вашего продукта или pet-проекта, превращая созвоны в конкретные коммиты и релизы.',
   },
   {
-    title: 'Масштабирование команды',
-    description: 'Помогаю нанять или разогнать продуктовую команду, настроить ритуалы, onboarding и growth-планы для каждого ключевого игрока.',
-  },
-];
-
-const mentoringAngles = [
-  {
-    title: 'Личный рост',
-    description: 'Строим индивидуальную траекторию развития, которая синхронизирована с задачами бизнеса и вашими амбициями.',
+    title: 'AI как часть процесса',
+    description: 'Показываю, как встроить AI-инструменты в ежедневную разработку: код-ревью, тесты, ресёрч и документацию.',
   },
   {
-    title: 'Практика вместо теории',
-    description: 'Разбираем реальные кейсы, ваши текущие проекты и метрики. Каждая встреча заканчивается понятным планом действий.',
-  },
-  {
-    title: 'Поддержка в сложных решениях',
-    description: 'Вы не остаетесь один на один с неопределённостью: помогу разобрать конфликт, запустить сложный релиз или пройти апрув от стейкхолдеров.',
+    title: 'Убираем слабые места',
+    description: 'Разбираем архитектуру, перформанс, DX и командные процессы, пока система не станет устойчивой.',
   },
 ];
 
 const collaborationSteps = [
   {
-    title: 'Диагностика и фокус',
-    description: 'В первую сессию погружаемся в контекст, анализируем метрики и формулируем гипотезы роста.',
+    title: 'Диагностика и маршрут',
+    description: 'Погружаемся в ваш уровень, цели и контекст, фиксируем стартовую точку и собираем roadmap роста.',
   },
   {
-    title: 'План действий',
-    description: 'Фиксируем приоритеты, шаги и ответственных. Я остаюсь рядом, чтобы помочь внедрить изменения без лишней бюрократии.',
+    title: 'План и практика',
+    description: 'Разбиваем трек на спринты: практикуем созвоны, созваниваемся по коду, собираем фичи и закрепляем знание.',
   },
   {
-    title: 'Измеримый результат',
-    description: 'Отслеживаем показатели и ретроспективы, корректируем движение и документируем решения, чтобы команда могла масштабировать успех.',
+    title: 'Движение и поддержка',
+    description: 'Меряем прогресс, корректируем курс и остаёмся на связи, чтобы сложные решения не откладывались.',
   },
 ];
 
 const trustSignals = [
-  '15+ лет строю цифровые продукты: от стартапов до enterprise.',
-  'Инженерное, продуктовое и операционное мышление в одной роли.',
-  'Работаю в формате «сделаем вместе», а не выдаю отчёты в вакууме.',
+  '15+ лет строю фронтенд-команды и продукты: от стартапов до enterprise.',
+  'Комбинирую опыт архитектора, тимлида и продакт-ментора — без теории ради теории.',
+  'Работаем в формате «делаем вместе»: созвоны, ревью, чек-листы и понятные артефакты.',
 ];
 
-export default function ConsultingMentoring({ t }: { t: Record<string, any> }) {
+const testimonials = [
+  {
+    quote: 'Ушёл с нуля до первого продакшн-лендинга за два месяца. Самое ценное — Егор помог встроить привычку быстро валидировать идеи и не застревать на деталях.',
+    author: 'Алексей, основатель сервиса side-проектов',
+  },
+];
+
+export default function ConsultingMentoring() {
   return (
     <>
       <Header isShareware={true} />
       <main className='px-6 md:px-12 lg:px-16 space-y-24'>
         <section className='pt-8'>
-          <SplitText text='Консалтинг и менторинг' />
+          <SplitText text='FRONTEND МЕНТОРИНГ' />
           <AnimatedText className='mt-6 max-w-3xl text-2xl md:text-[28px] leading-snug text-slate-800 dark:text-slate-200'>
             <p>
-              Помогаю продуктовым и инженерным командам расти быстрее: выходим на предсказуемые релизы,
-              повышаем retention, наводим порядок в процессах и усиливаем людей, от которых зависит результат.
+              Менторю разработчиков и команды по фронтенду: от первых шагов без опыта до запуска продакшн-проектов. Помогаю
+              встроить AI-инструменты в ежедневную работу и закрыть пробелы: архитектура, перформанс, лидерство, процессы.
             </p>
           </AnimatedText>
         </section>
 
-        <section className='grid gap-6 lg:grid-cols-3'>
-          {consultingPillars.map((pillar) => (
-            <AnimatedText key={pillar.title} className='h-full'>
-              <div className='h-full rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/70 px-8 py-10 shadow-[0_20px_45px_-25px_rgba(15,23,42,0.3)]'>
-                <h2 className='text-2xl font-bold uppercase text-slate-900 dark:text-white'>{pillar.title}</h2>
-                <p className='mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300'>{pillar.description}</p>
-              </div>
-            </AnimatedText>
-          ))}
-        </section>
-
-        <section className='grid gap-6 lg:grid-cols-[2fr_3fr] items-start'>
-          <AnimatedText>
-            <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-[#fef7ff] px-8 py-10'>
-              <h2 className='text-2xl font-bold uppercase text-[#9d4ded]'>Форматы консалтинга</h2>
-              <ul className='mt-4 space-y-3 text-lg leading-relaxed text-slate-700 dark:text-slate-200'>
-                <li>• Weekly-формат: глубокая сессия раз в неделю + async-поддержка для команды.</li>
-                <li>• Sprint-формат: настраиваем процессы за 2-3 недели, фиксируем регламенты и метрики.</li>
-                <li>• Anti-crisis: подключаюсь «вчера», чтобы привести систему к контролируемому состоянию.</li>
-              </ul>
-            </div>
-          </AnimatedText>
-          <AnimatedText className='grid gap-6 sm:grid-cols-2'>
-            {mentoringAngles.map((angle) => (
-              <div key={angle.title} className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-black px-8 py-10 text-white'>
-                <h3 className='text-xl font-bold uppercase'>{angle.title}</h3>
-                <p className='mt-4 text-base leading-relaxed text-slate-100'>{angle.description}</p>
-              </div>
-            ))}
-          </AnimatedText>
+        <section>
+          <SplitText text='ЧЕМ ПОМОГУ' />
+          <div className='mt-10 grid gap-6 md:grid-cols-2'>
+            {mentoringHighlights.map((highlight, index) => {
+              const isWhite = index % 2 === 0;
+              return (
+                <AnimatedText key={highlight.title} className='h-full'>
+                  <div
+                    className={`h-full rounded-3xl border border-slate-200 dark:border-slate-800 px-8 py-10 transition-colors ${
+                      isWhite
+                        ? 'bg-white text-slate-900'
+                        : 'bg-black text-white'
+                    }`}
+                  >
+                    <h2 className='text-2xl font-bold uppercase'>{highlight.title}</h2>
+                    <p className={`mt-4 text-lg leading-relaxed ${isWhite ? 'text-slate-600' : 'text-slate-200'}`}>
+                      {highlight.description}
+                    </p>
+                  </div>
+                </AnimatedText>
+              );
+            })}
+          </div>
         </section>
 
         <section>
@@ -107,10 +94,10 @@ export default function ConsultingMentoring({ t }: { t: Record<string, any> }) {
           <div className='mt-10 grid gap-6 md:grid-cols-3'>
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
-                <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/70 px-8 py-10 h-full'>
-                  <span className='text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase'>Шаг {index + 1}</span>
-                  <h3 className='mt-3 text-2xl font-bold uppercase text-slate-900 dark:text-white'>{step.title}</h3>
-                  <p className='mt-4 text-lg leading-relaxed text-slate-600 dark:text-slate-300'>{step.description}</p>
+                <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 h-full'>
+                  <span className='text-sm font-semibold text-slate-400 uppercase'>Шаг {index + 1}</span>
+                  <h3 className='mt-3 text-2xl font-bold uppercase text-slate-900'>{step.title}</h3>
+                  <p className='mt-4 text-lg leading-relaxed text-slate-600'>{step.description}</p>
                 </div>
               </AnimatedText>
             ))}
@@ -119,8 +106,8 @@ export default function ConsultingMentoring({ t }: { t: Record<string, any> }) {
 
         <section className='grid gap-6 lg:grid-cols-[3fr_2fr] items-center'>
           <AnimatedText>
-            <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-[#f9f2f4] px-8 py-10 text-[#c7254e]'>
-              <h2 className='text-2xl font-bold uppercase'>Почему доверяют</h2>
+            <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-900'>
+              <h2 className='text-2xl font-bold uppercase'>Что получите</h2>
               <ul className='mt-6 space-y-4 text-lg leading-relaxed'>
                 {trustSignals.map((signal) => (
                   <li key={signal}>• {signal}</li>
@@ -128,53 +115,65 @@ export default function ConsultingMentoring({ t }: { t: Record<string, any> }) {
               </ul>
             </div>
           </AnimatedText>
-          <AnimatedText className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-950 px-8 py-10 text-slate-100'>
-            <h2 className='text-2xl font-bold uppercase text-white'>Результат для вас</h2>
+          <AnimatedText className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-black px-8 py-10 text-white'>
+            <h2 className='text-2xl font-bold uppercase'>Опора на результат</h2>
             <p className='mt-4 text-lg leading-relaxed text-slate-200'>
-              Сформулированная стратегия, работающие процессы и сильная команда, которая видит цель и понимает, как к ней прийти.
-              Никаких расплывчатых отчетов — только конкретные артефакты, решения и шаги.
+              Упор на системные изменения: фиксируем чек-листы, регламенты и метрики, чтобы рост не заканчивался на нашем созвоне.
             </p>
           </AnimatedText>
         </section>
 
-        <section className='pb-8'>
-          <SplitText text='Выбирайте формат' />
-          <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700 dark:text-slate-200'>
-            <p>
-              Напишите письмо — и мы договоримся о первом созвоне. Я быстро погружаюсь в контекст, задаю прямые вопросы,
-              после чего предлагаю конкретный план, с которым вам будет просто стартовать.
-            </p>
-          </AnimatedText>
-          <div className='mt-8 flex flex-col md:flex-row gap-6'>
-            <AnimatedText className='md:flex-1'>
-              <a
-                href='mailto:i@egorshareware.ru?subject=%D0%9A%D0%BE%D0%BD%D1%81%D0%B0%D0%BB%D1%82%D0%B8%D0%BD%D0%B3'
-                className='no-underline'
-              >
-                <button
-                  className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
-                >
-                  Консалтинг · 99$ в час
-                </button>
-              </a>
-            </AnimatedText>
-            <AnimatedText className='md:flex-1'>
-              <a
-                href='mailto:i@egorshareware.ru?subject=%D0%9C%D0%B5%D0%BD%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3'
-                className='no-underline'
-              >
-                <button
-                  className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fef7ff] px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-[#9d4ded] hover:bg-[#e9d9ff] focus:outline-none focus:ring-2 focus:ring-[#9d4ded] focus:ring-offset-2'
-                >
-                  Менторинг · 499$ в месяц
-                </button>
-              </a>
-            </AnimatedText>
+        <section>
+          <SplitText text='Отзывы' />
+          <div className='mt-10 grid gap-6 md:grid-cols-2'>
+            {testimonials.map((testimonial) => (
+              <AnimatedText key={testimonial.quote}>
+                <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10'>
+                  <p className='text-lg leading-relaxed text-slate-700'>&ldquo;{testimonial.quote}&rdquo;</p>
+                  <span className='mt-6 block text-sm font-semibold uppercase text-slate-500'>{testimonial.author}</span>
+                </div>
+              </AnimatedText>
+            ))}
           </div>
         </section>
+
+        <section>
+          <SplitText text='Про меня' />
+          <AnimatedText className='mt-6'>
+            <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-800'>
+              <p className='text-lg leading-relaxed'>
+                15 лет руковожу фронтендом продуктов уровня amoCRM и ритейла США, строю команды, процессы и архитектуру.
+                Мой персональный сайт —{' '}
+                <a href='https://egor.sh' target='_blank' rel='noopener noreferrer' className='underline'>
+                  egor.sh
+                </a>
+                , там можно посмотреть другие кейсы и подходы.
+              </p>
+            </div>
+          </AnimatedText>
+        </section>
+
+        <section className='pb-8'>
+          <SplitText text='Присоединяйтесь' />
+          <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700'>
+            <p>
+              Напишите письмо — обсудим задачи, формат и договоримся о первом созвоне. Отвечу быстро и предложу план, с которым можно стартовать сразу.
+            </p>
+          </AnimatedText>
+          <AnimatedText className='mt-8'>
+            <a
+              href='mailto:i@egorshareware.ru?subject=%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%20%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3'
+              className='no-underline'
+            >
+              <button
+                className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
+              >
+                Менторинг · договоримся на созвоне
+              </button>
+            </a>
+          </AnimatedText>
+        </section>
       </main>
-      <SocialProfiles t={t} />
-      <Footer t={t} />
     </>
   );
 }
