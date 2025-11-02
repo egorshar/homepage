@@ -12,7 +12,8 @@ export default function Projects({ t }: { t: Record<string, any>}) {
           <Link href='https://wowcoder.chat' className='no-underline'>
             <button
               className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fef7ff] px-8 py-3 text-3xl font-bold uppercase text-[#9d4ded] hover:bg-[#e9d9ff] focus:outline-none focus:ring-2 focus:ring-[#9d4ded] focus:ring-offset-2'>
-              <span role="img" aria-label="robot" className='text-5xl mr-5'>🤖</span>WOWCODER
+              <Image src='/static/wowcoder.png' width={60} height={60} className='mr-5'
+                     alt='WOWCODER' />WOWCODER
             </button>
           </Link>
         </AnimatedText>
