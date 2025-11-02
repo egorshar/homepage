@@ -123,6 +123,9 @@ export default function ConsultingMentoring() {
               {trustSignals.map((signal) => (
                 <li key={signal}>• {signal}</li>
               ))}
+              <li>
+                • <a href="https://egor.sh/ru">Подробнее и про опыт</a> 👋
+              </li>
             </ul>
           </AnimatedText>
         </section>
