@@ -139,7 +139,7 @@ export default function ConsultingMentoring() {
                 Постоянная работа в асинхронном формате через telegram + github.
               </li>
               <li>4 созвона в месяц по полтора часа.</li>
-              <li>Базово 499$ в месяц.</li>
+              <li>Базово $500 в месяц.</li>
               <li>Introduction-созвон - бесплатно, там обсудим детальнее.</li>
             </ul>
           </AnimatedText>
