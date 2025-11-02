@@ -59,7 +59,7 @@ export default function ConsultingMentoring() {
 
         <section>
           <SplitText text='ЧЕМ ПОМОГУ' />
-          <div className='mt-10 grid gap-6 md:grid-cols-2'>
+          <div className='mt-10 grid gap-6 md:grid-cols-2 -mx-8'>
             {mentoringHighlights.map((highlight, index) => {
               const isWhite = index % 2 === 0;
               return (
@@ -84,7 +84,7 @@ export default function ConsultingMentoring() {
 
         <section>
           <SplitText text='Формат' />
-          <div className='mt-10 grid gap-6 md:grid-cols-3'>
+          <div className='mt-10 grid gap-6 md:grid-cols-3 -mx-8'>
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
                 <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 h-full'>
@@ -118,10 +118,10 @@ export default function ConsultingMentoring() {
               <li>Давайте проведем онбординг-звонок и там обсудим детальнее, это бесплатно.</li>
             </ul>
           </AnimatedText>
-          <AnimatedText className='mt-8'>
+          <AnimatedText className='mt-8 -mx-8'>
             <a
               href='mailto:i@egorshareware.ru?subject=%D0%A4%D1%80%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D0%B4%20%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80%D0%B8%D0%BD%D0%B3'
-              className='no-underline'
+              className='no-underline block'
             >
               <button
                 className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
