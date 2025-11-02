@@ -83,7 +83,7 @@ export default function ConsultingMentoring() {
         </section>
 
         <section>
-          <SplitText text='Как мы работаем' />
+          <SplitText text='Формат' />
           <div className='mt-10 grid gap-6 md:grid-cols-3'>
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
@@ -97,53 +97,26 @@ export default function ConsultingMentoring() {
           </div>
         </section>
 
-        <section className='grid gap-6 lg:grid-cols-[3fr_2fr] items-stretch'>
-          <AnimatedText className='h-full'>
-            <div className='flex h-full flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-900'>
-              <h2 className='text-2xl font-bold uppercase'>Что получите</h2>
-              <ul className='mt-6 space-y-4 text-lg leading-relaxed'>
-                {trustSignals.map((signal) => (
-                  <li key={signal}>• {signal}</li>
-                ))}
-              </ul>
-            </div>
-          </AnimatedText>
-          <AnimatedText className='h-full'>
-            <div className='flex h-full flex-col rounded-3xl border border-slate-200 dark:border-slate-800 bg-black px-8 py-10 text-white'>
-              <h2 className='text-2xl font-bold uppercase'>Опора на результат</h2>
-              <p className='mt-4 text-lg leading-relaxed text-slate-200'>
-                Упор на системные изменения: фиксируем чек-листы, регламенты и метрики, чтобы рост не заканчивался на нашем созвоне.
-              </p>
-            </div>
-          </AnimatedText>
-        </section>
-
         <section>
           <SplitText text='Про меня' />
           <AnimatedText className='mt-6'>
-            <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 text-slate-800'>
-              <p className='text-lg leading-relaxed'>
-                15 лет руковожу фронтендом продуктов с frontend командами уровня 20+ разработчиков, строю команды, процессы и архитектуру. Подробнее про мой опыт на{' '}
-                <a href='https://egor.sh' target='_blank' rel='noopener noreferrer' className='underline'>
-                  https://egor.sh
-                </a>
-                .
-              </p>
-            </div>
+            <ul className='mt-6 space-y-4 text-lg leading-relaxed'>
+              {trustSignals.map((signal) => (
+                <li key={signal}>• {signal}</li>
+              ))}
+            </ul>
           </AnimatedText>
         </section>
 
         <section className='pb-8'>
-          <SplitText text='работаем?' />
+          <SplitText text='Интересно?' />
           <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700'>
-            <div>
-              <h3 className='text-2xl font-bold text-slate-900'>обычный формат работы</h3>
-              <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
-                <li>постоянная работа в асинхронном формате через telegram + github</li>
-                <li>4 созвона в месяц по полтора часа</li>
-                <li>на онбординг-звонке обсудим детальнее</li>
-              </ul>
-            </div>
+            <h3 className='text-2xl font-bold text-slate-900'>Как работаем:</h3>
+            <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
+              <li>Постоянная работа в асинхронном формате через telegram + github.</li>
+              <li>4 созвона в месяц по полтора часа.</li>
+              <li>Давайте проведем онбординг-звонок и там обсудим детальнее, это бесплатно.</li>
+            </ul>
           </AnimatedText>
           <AnimatedText className='mt-8'>
             <a
