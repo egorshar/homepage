@@ -100,7 +100,7 @@ export default function ConsultingMentoring() {
           <div className="mt-10 grid gap-6 md:grid-cols-3 -mx-8">
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
-                <div className="rounded-3xl border border-slate-100 bg-slate-100 dark:border-slate-800 bg-white px-8 py-10 h-full">
+                <div className="rounded-3xl border border-slate-100 bg-slate-100 dark:border-slate-800 px-8 py-10 h-full">
                   <span className="text-sm font-semibold text-slate-400 uppercase">
                     Шаг {index + 1}
                   </span>
