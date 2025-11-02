@@ -5,9 +5,9 @@ import { getDictionary } from '@/utils/dictionaries';
 import { isSharewareDomain } from '@/utils/index';
 
 export default async function Page({ params: { lang } }) {
-  const t = await getDictionary(lang);
   const requestHeaders = headers();
   const host = requestHeaders.get('host') || '';
+  const t = await getDictionary(isSharewareDomain(host) ? 'ru' : lang);
   const IndexToRender = isSharewareDomain(host) ? IndexShareware : Index;
 
   return (
