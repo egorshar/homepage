@@ -46,7 +46,7 @@ export default function ConsultingMentoring() {
   return (
     <>
       <Header isShareware={true} />
-      <main className='px-6 md:px-12 lg:px-16 space-y-24'>
+      <main className='px-8 lg:px-16 space-y-24'>
         <section className='pt-16'>
           <SplitText text='FRONTEND МЕНТОРИНГ' />
           <AnimatedText className='mt-6 max-w-3xl text-2xl md:text-[28px] leading-snug text-slate-800 dark:text-slate-200'>
@@ -109,7 +109,7 @@ export default function ConsultingMentoring() {
         </section>
 
         <section className='pb-8'>
-          <SplitText text='Интересно?' />
+          <SplitText text='Готовы?' />
           <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700'>
             <h3 className='text-2xl font-bold text-slate-900'>Как работаем:</h3>
             <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
