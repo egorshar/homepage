@@ -48,7 +48,7 @@ const LogoWithIndex = ({ isShareware = false }: { isShareware?: boolean }) => {
       </div>
       {isShareware && (
         <h1 className="mb-0 left-full ml-[4.8rem]">
-          areware<sup> 🧠 💸</sup>
+          areware<sup className="text-xs -top-6"> 🧠 💸</sup>
         </h1>
       )}
     </div>
