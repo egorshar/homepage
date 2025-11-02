@@ -5,34 +5,41 @@ import AnimatedText from '@/components/AnimatedText/AnimatedText';
 const mentoringHighlights = [
   {
     title: 'С нуля до продакшена',
-    description: 'Помогаю собрать фундамент фронтенда: от базового HTML/CSS/JS до первого сайта, который выходит в прод.',
+    description:
+      'Помогаю собрать фундамент фронтенда: от базового HTML/CSS/JS до первого сайта, который выходит в прод.',
   },
   {
     title: 'Практика на ваших задачах',
-    description: 'Работаем поверх вашего продукта или pet-проекта, превращая созвоны в конкретные коммиты и релизы.',
+    description:
+      'Работаем поверх вашего продукта или pet-проекта, превращая созвоны в конкретные коммиты и релизы.',
   },
   {
     title: 'AI как часть процесса',
-    description: 'Показываю, как встроить AI-инструменты в ежедневную разработку: код-ревью, тесты, ресёрч и документацию.',
+    description:
+      'Показываю, как встроить AI-инструменты в ежедневную разработку: код-ревью, тесты, ресёрч и документацию.',
   },
   {
     title: 'Убираем слабые места',
-    description: 'Разбираем архитектуру, перформанс, DX и командные процессы, пока система не станет устойчивой.',
+    description:
+      'Разбираем архитектуру, перформанс, DX и командные процессы, пока система не станет устойчивой.',
   },
 ];
 
 const collaborationSteps = [
   {
     title: 'Диагностика и маршрут',
-    description: 'Погружаемся в ваш уровень, цели и контекст, фиксируем стартовую точку и собираем roadmap роста.',
+    description:
+      'Погружаемся в ваш уровень, цели и контекст, фиксируем стартовую точку и собираем roadmap роста.',
   },
   {
     title: 'План и практика',
-    description: 'Разбиваем трек на спринты: практикуем созвоны, созваниваемся по коду, собираем фичи и закрепляем знание.',
+    description:
+      'Разбиваем трек на спринты: практикуем созвоны, созваниваемся по коду, собираем фичи и закрепляем знание.',
   },
   {
     title: 'Движение и поддержка',
-    description: 'Меряем прогресс, корректируем курс и остаёмся на связи, чтобы сложные решения не откладывались.',
+    description:
+      'Меряем прогресс, корректируем курс и остаёмся на связи, чтобы сложные решения не откладывались.',
   },
 ];
 
@@ -46,24 +53,26 @@ export default function ConsultingMentoring() {
   return (
     <>
       <Header isShareware={true} />
-      <main className='px-8 lg:px-16 space-y-24'>
-        <section className='pt-16'>
-          <SplitText text='FRONTEND МЕНТОРИНГ' />
-          <AnimatedText className='mt-6 max-w-3xl text-2xl md:text-[28px] leading-snug text-slate-800 dark:text-slate-200'>
+      <main className="px-8 lg:px-16 space-y-24">
+        <section className="pt-16">
+          <SplitText text="FRONTEND МЕНТОРИНГ" />
+          <AnimatedText className="mt-6 max-w-3xl text-2xl md:text-[28px] leading-snug text-slate-800 dark:text-slate-200">
             <p>
-              Менторю разработчиков и команды по фронтенду: от первых шагов без опыта до запуска продакшн-проектов. Помогаю
-              встроить AI-инструменты в ежедневную работу и закрыть пробелы: архитектура, перформанс, лидерство, процессы.
+              Менторю разработчиков и команды по фронтенду: от первых шагов без
+              опыта до запуска продакшн-проектов. Помогаю встроить
+              AI-инструменты в ежедневную работу и закрыть пробелы: архитектура,
+              перформанс, лидерство, процессы.
             </p>
           </AnimatedText>
         </section>
 
         <section>
-          <SplitText text='ЧЕМ ПОМОГУ' />
-          <div className='mt-10 grid gap-6 md:grid-cols-2 -mx-8'>
+          <SplitText text="ЧЕМ ПОМОГУ" />
+          <div className="mt-10 grid gap-6 md:grid-cols-2 -mx-8">
             {mentoringHighlights.map((highlight, index) => {
               const isWhite = index % 2 === 0;
               return (
-                <AnimatedText key={highlight.title} className='h-full'>
+                <AnimatedText key={highlight.title} className="h-full">
                   <div
                     className={`h-full rounded-3xl border border-slate-200 dark:border-slate-800 px-8 py-10 transition-colors ${
                       isWhite
@@ -71,8 +80,12 @@ export default function ConsultingMentoring() {
                         : 'bg-black text-white'
                     }`}
                   >
-                    <h2 className='text-2xl font-bold uppercase'>{highlight.title}</h2>
-                    <p className={`mt-4 text-lg leading-relaxed ${isWhite ? 'text-slate-600' : 'text-slate-200'}`}>
+                    <h2 className="text-2xl font-bold uppercase">
+                      {highlight.title}
+                    </h2>
+                    <p
+                      className={`mt-4 text-lg leading-relaxed ${isWhite ? 'text-slate-600' : 'text-slate-200'}`}
+                    >
                       {highlight.description}
                     </p>
                   </div>
@@ -83,14 +96,20 @@ export default function ConsultingMentoring() {
         </section>
 
         <section>
-          <SplitText text='Формат' />
-          <div className='mt-10 grid gap-6 md:grid-cols-3 -mx-8'>
+          <SplitText text="Формат" />
+          <div className="mt-10 grid gap-6 md:grid-cols-3 -mx-8">
             {collaborationSteps.map((step, index) => (
               <AnimatedText key={step.title}>
-                <div className='rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 h-full'>
-                  <span className='text-sm font-semibold text-slate-400 uppercase'>Шаг {index + 1}</span>
-                  <h3 className='mt-3 text-2xl font-bold uppercase text-slate-900'>{step.title}</h3>
-                  <p className='mt-4 text-lg leading-relaxed text-slate-600'>{step.description}</p>
+                <div className="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white px-8 py-10 h-full">
+                  <span className="text-sm font-semibold text-slate-400 uppercase">
+                    Шаг {index + 1}
+                  </span>
+                  <h3 className="mt-3 text-2xl font-bold uppercase text-slate-900">
+                    {step.title}
+                  </h3>
+                  <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                    {step.description}
+                  </p>
                 </div>
               </AnimatedText>
             ))}
@@ -98,9 +117,9 @@ export default function ConsultingMentoring() {
         </section>
 
         <section>
-          <SplitText text='Про меня' />
-          <AnimatedText className='mt-6'>
-            <ul className='mt-6 space-y-4 text-lg leading-relaxed'>
+          <SplitText text="Про меня" />
+          <AnimatedText className="mt-6">
+            <ul className="mt-6 space-y-4 text-lg leading-relaxed">
               {trustSignals.map((signal) => (
                 <li key={signal}>• {signal}</li>
               ))}
@@ -108,26 +127,27 @@ export default function ConsultingMentoring() {
           </AnimatedText>
         </section>
 
-        <section className='pb-8'>
-          <SplitText text='Готовы?' />
-          <AnimatedText className='mt-6 max-w-3xl text-xl leading-relaxed text-slate-700'>
-            <h3 className='text-2xl font-bold text-slate-900'>Как работаем:</h3>
-            <ul className='mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700'>
-              <li>Постоянная работа в асинхронном формате через telegram + github.</li>
+        <section className="pb-8">
+          <SplitText text="Готовы?" />
+          <AnimatedText className="mt-6 max-w-3xl text-xl leading-relaxed text-slate-700">
+            <h3 className="text-2xl font-bold text-slate-900">Как работаем:</h3>
+            <ul className="mt-4 list-disc space-y-3 pl-6 text-lg leading-relaxed text-slate-700">
+              <li>
+                Постоянная работа в асинхронном формате через telegram + github.
+              </li>
               <li>4 созвона в месяц по полтора часа.</li>
               <li>Базово 499$ в месяц.</li>
               <li>Introduction-созвон - бесплатно, там обсудим детальнее.</li>
             </ul>
           </AnimatedText>
-          <AnimatedText className='mt-8 -mx-8'>
+          <AnimatedText className="mt-8 -mx-8">
             <a
-              href='https://calendly.com/egorshar/frontend'
-              className='no-underline block'
+              href="https://calendly.com/egorshar/frontend"
+              className="no-underline block"
             >
-              <button
-                className='flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
-              >
-                выбрать доступный слот
+              <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
+                выбрать&nbsp;
+                <span className="hidden md:inline">доступный&nbsp;</span>слот
               </button>
             </a>
           </AnimatedText>
