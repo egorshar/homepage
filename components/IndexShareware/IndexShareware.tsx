@@ -1,5 +1,5 @@
 import Header from '@/components/Header/Header';
-import ParallaxHero from '@/components/ParallaxHero/ParallaxHero';
+import ParallaxHero from '@/components/Shareware/ParallaxHero/ParallaxHero';
 import About from '@/components/About/About';
 import Projects from '@/components/Projects/Projects';
 import Experience from '@/components/Experience/Experience';
