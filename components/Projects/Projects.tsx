@@ -9,12 +9,17 @@ export default function Projects({ t }: { t: Record<string, any> }) {
       <SplitText className="px-8" text={t.projects.header} />
       <div className="mt-8">
         <AnimatedText>
-          <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fef7ff] px-8 py-3 text-3xl font-bold uppercase text-[#9d4ded] hover:bg-[#f2e5ff] focus:outline-none focus:ring-2 focus:ring-[#9d4ded] focus:ring-offset-2" type="button">
+          <Link
+            href="https://wowcoder.chat"
+            className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fef7ff] px-8 py-3 text-3xl font-bold uppercase text-[#9d4ded] hover:bg-[#f2e5ff] focus:outline-none focus:ring-2 focus:ring-[#9d4ded] focus:ring-offset-2 no-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="mr-5 text-4xl" role="img" aria-label="Robot logo">
               🤖
             </span>
             WOWCODER
-          </button>
+          </Link>
         </AnimatedText>
         <AnimatedText>
           <Link href="https://t.me/opg_dev" className="no-underline">
