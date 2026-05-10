@@ -9,8 +9,24 @@ export default function Projects({ t }: { t: Record<string, any> }) {
       <SplitText className="px-8" text={t.projects.header} />
       <div className="mt-8">
         <AnimatedText>
+          <Link href="https://wowlook.egor.sh" className="no-underline">
+            <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-gradient-to-r from-orange-50 to-purple-50 dark:from-orange-950/40 dark:to-purple-950/40 px-8 py-3 text-3xl font-bold uppercase text-orange-600 hover:from-orange-100 hover:to-purple-100 dark:hover:from-orange-900/40 dark:hover:to-purple-900/40 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
+              <Image
+                src="/static/wowlook.jpeg"
+                width={60}
+                height={60}
+                className="rounded-2xl mr-5"
+                alt="WowLook"
+              />
+              <span className="bg-gradient-to-r from-orange-500 to-purple-600 bg-clip-text text-transparent">
+                WowLook
+              </span>
+            </button>
+          </Link>
+        </AnimatedText>
+        <AnimatedText>
           <Link href="https://wowcoder.chat" className="no-underline">
-            <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fef7ff] px-8 py-3 text-3xl font-bold uppercase text-[#9d4ded] hover:bg-[#e9d9ff] focus:outline-none focus:ring-2 focus:ring-[#9d4ded] focus:ring-offset-2">
+            <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fef7ff] dark:bg-purple-950/40 px-8 py-3 text-3xl font-bold uppercase text-[#9d4ded] hover:bg-[#e9d9ff] dark:hover:bg-purple-900/40 focus:outline-none focus:ring-2 focus:ring-[#9d4ded] focus:ring-offset-2">
               <Image
                 src="/static/wowcoder.png"
                 width={60}
@@ -41,11 +57,11 @@ export default function Projects({ t }: { t: Record<string, any> }) {
           <Link href="https://how-much.in" className="no-underline">
             <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#ddd7ff] px-8 py-3 text-3xl font-bold uppercase text-black hover:bg-[#c8c3e8] focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
               <Image
-                src="/static/howmuchin.webp"
+                src="/static/howmuchin.png"
                 width={60}
                 height={60}
-                className="mr-5"
-                alt="Organized Programming Group"
+                className="rounded-2xl mr-5"
+                alt="How Much In"
               />
               How Much In
             </button>
