@@ -9,6 +9,18 @@ export default function Projects({ t }: { t: Record<string, any> }) {
       <SplitText className="px-8" text={t.projects.header} />
       <div className="mt-8">
         <AnimatedText>
+          <Link href="https://kalyaki.com" className="no-underline">
+            <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fff9eb] dark:bg-amber-950/40 px-8 py-3 text-3xl font-bold uppercase hover:bg-[#ffe9b4] dark:hover:bg-amber-900/40 focus:outline-none focus:ring-2 focus:ring-[#03883f] focus:ring-offset-2">
+              <span className="flex items-center justify-center w-[60px] h-[60px] rounded-2xl mr-5 bg-gradient-to-br from-[#03883f] to-[#fe641c] text-white text-2xl">
+                🎨
+              </span>
+              <span className="bg-gradient-to-r from-[#03883f] to-[#fe641c] bg-clip-text text-transparent">
+                Kalyaki
+              </span>
+            </button>
+          </Link>
+        </AnimatedText>
+        <AnimatedText>
           <Link href="https://wowlook.egor.sh" className="no-underline">
             <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-gradient-to-r from-orange-50 to-purple-50 dark:from-orange-950/40 dark:to-purple-950/40 px-8 py-3 text-3xl font-bold uppercase text-orange-600 hover:from-orange-100 hover:to-purple-100 dark:hover:from-orange-900/40 dark:hover:to-purple-900/40 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2">
               <Image
