@@ -10,7 +10,7 @@ export default function Projects({ t }: { t: Record<string, any> }) {
       <div className="mt-8">
         <AnimatedText>
           <Link href="https://kalyaki.com?utm_source=homepage" className="no-underline">
-            <button className="group flex w-full h-[100px] items-center rounded-3xl text-left border-2 border-[#ffd95f] bg-[#fff9eb] dark:bg-amber-950/50 dark:border-amber-700 px-8 py-3 text-3xl font-bold uppercase hover:bg-[#ffe9b4] dark:hover:bg-amber-900/50 focus:outline-none focus:ring-2 focus:ring-[#03883f] focus:ring-offset-2">
+            <button className="group flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fff9eb] dark:bg-amber-950/50 px-8 py-3 text-3xl font-bold uppercase hover:bg-[#ffe9b4] dark:hover:bg-amber-900/50 focus:outline-none focus:ring-2 focus:ring-[#03883f] focus:ring-offset-2">
               <Image
                 src="/static/kalyaki-icon.png"
                 width={60}
