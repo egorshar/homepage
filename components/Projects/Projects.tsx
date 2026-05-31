@@ -10,12 +10,22 @@ export default function Projects({ t }: { t: Record<string, any> }) {
       <div className="mt-8">
         <AnimatedText>
           <Link href="https://kalyaki.com" className="no-underline">
-            <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fff9eb] dark:bg-amber-950/40 px-8 py-3 text-3xl font-bold uppercase hover:bg-[#ffe9b4] dark:hover:bg-amber-900/40 focus:outline-none focus:ring-2 focus:ring-[#03883f] focus:ring-offset-2">
-              <span className="flex items-center justify-center w-[60px] h-[60px] rounded-2xl mr-5 bg-gradient-to-br from-[#03883f] to-[#fe641c] text-white text-2xl">
-                🎨
-              </span>
-              <span className="bg-gradient-to-r from-[#03883f] to-[#fe641c] bg-clip-text text-transparent">
+            <button className="group flex w-full h-[100px] items-center rounded-3xl text-left border-2 border-[#ffd95f] bg-gradient-to-r from-[#fff9eb] via-[#ffe9b4] to-[#fff9eb] dark:from-amber-950/50 dark:via-amber-900/40 dark:to-amber-950/50 dark:border-amber-700 px-8 py-3 text-3xl font-bold uppercase hover:from-[#ffe9b4] hover:via-[#ffd95f] hover:to-[#ffe9b4] dark:hover:from-amber-900/50 dark:hover:via-amber-800/50 dark:hover:to-amber-900/50 focus:outline-none focus:ring-2 focus:ring-[#03883f] focus:ring-offset-2">
+              <Image
+                src="/static/kalyaki-icon.png"
+                width={60}
+                height={60}
+                className="rounded-2xl mr-5"
+                alt="Kalyaki"
+              />
+              <span className="text-[#803f18] dark:text-amber-200">
                 Kalyaki
+              </span>
+              <span className="ml-3 hidden sm:flex gap-1.5">
+                <span className="inline-block w-3 h-3 rounded-full bg-[#03883f]"></span>
+                <span className="inline-block w-3 h-3 rounded-full bg-[#fe641c]"></span>
+                <span className="inline-block w-3 h-3 rounded-full bg-[#ffceeb]"></span>
+                <span className="inline-block w-3 h-3 rounded-full bg-[#b1e1ff]"></span>
               </span>
             </button>
           </Link>
