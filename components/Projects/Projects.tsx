@@ -18,7 +18,7 @@ export default function Projects({ t }: { t: Record<string, any> }) {
                 className="rounded-2xl mr-5"
                 alt="Kalyaki"
               />
-              <span className="text-[#803f18] dark:text-amber-200">
+              <span className="font-hegel tracking-wide text-[#803f18] dark:text-amber-200">
                 Kalyaki
               </span>
               <span className="ml-3 hidden sm:flex gap-1.5">

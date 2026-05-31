@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'HegelPro';
+  src: url('/static/fonts/HegelPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-hegel {
+  font-family: 'HegelPro', sans-serif;
+}
+
 @layer base {
   h1 {
     @apply text-4xl font-bold mb-6;
