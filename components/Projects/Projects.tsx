@@ -1,13 +1,32 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Rubik } from 'next/font/google';
 import AnimatedText from '@/components/AnimatedText/AnimatedText';
 import SplitText from '@/components/SplitText/SplitText';
+
+const rubik = Rubik({ subsets: ['latin'], weight: '900' });
 
 export default function Projects({ t }: { t: Record<string, any> }) {
   return (
     <div className="w-full py-12">
       <SplitText className="px-8" text={t.projects.header} />
       <div className="mt-8">
+        <AnimatedText>
+          <Link href="https://arbeef.app?utm_source=homepage" className="no-underline">
+            <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#0b0b0c] px-8 py-3 text-3xl uppercase text-white hover:bg-[#1f1f22] focus:outline-none focus:ring-2 focus:ring-[#c6ff3d] focus:ring-offset-2">
+              <Image
+                src="/static/arbeef-icon.png"
+                width={60}
+                height={60}
+                className="rounded-2xl mr-5"
+                alt="ARBEEF"
+              />
+              <span className={`${rubik.className} tracking-[-0.03em]`}>
+                ARBEEF
+              </span>
+            </button>
+          </Link>
+        </AnimatedText>
         <AnimatedText>
           <Link href="https://kalyaki.com?utm_source=homepage" className="no-underline">
             <button className="group flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-[#fff9eb] dark:bg-amber-950/50 px-8 py-3 text-3xl font-bold uppercase hover:bg-[#ffe9b4] dark:hover:bg-amber-900/50 focus:outline-none focus:ring-2 focus:ring-[#03883f] focus:ring-offset-2">
