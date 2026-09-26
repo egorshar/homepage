@@ -146,12 +146,10 @@ export default function ConsultingMentoring() {
           <AnimatedText className="mt-8 -mx-8">
             <a
               href="https://calendly.com/egorshar/frontend"
-              className="no-underline block"
+              className="no-underline flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2"
             >
-              <button className="flex w-full h-[100px] items-center rounded-3xl text-left border border-transparent bg-black px-8 py-3 text-2xl md:text-3xl font-bold uppercase text-white hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">
-                выбрать&nbsp;
-                <span className="hidden md:inline">доступный&nbsp;</span>слот
-              </button>
+              выбрать&nbsp;
+              <span className="hidden md:inline">доступный&nbsp;</span>слот
             </a>
           </AnimatedText>
         </section>
