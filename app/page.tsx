@@ -3,6 +3,11 @@ import Index from '@/components/Index/Index';
 import { getDictionary } from '@/utils/dictionaries';
 import { isSharewareDomain } from '@/utils/index';
 import ConsultingMentoring from '@/components/ConsultingMentoring/ConsultingMentoring';
+import { getPageMetadata } from '@/utils/metadata';
+
+export async function generateMetadata() {
+  return getPageMetadata('/');
+}
 
 export default async function Page({ params: { lang } }) {
   const requestHeaders = headers();
