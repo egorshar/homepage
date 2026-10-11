@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 
+import { PATHNAME_HEADER } from '@/utils/constants';
+
 const PUBLIC_FILE = /\.(.*)$/;
 let locales = ['en', 'ru'];
 
@@ -18,26 +20,31 @@ export function middleware(request) {
   // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
 
+  // Expose the page path to server components (always overwrite a client-sent value)
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set(PATHNAME_HEADER, pathname);
+  const next = () => NextResponse.next({ request: { headers: requestHeaders } });
+
   // Пропускаем файлы и API
   if (
     PUBLIC_FILE.test(pathname) ||
     pathname.startsWith('/api') ||
     pathname.includes('/_next')
   ) {
-    return NextResponse.next();
+    return next();
   }
 
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale) return next();
 
   // Redirect if there is no locale
   const locale = getLocale(request);
 
   if (locale === 'en') {
-    return NextResponse.next();
+    return next();
   }
 
   request.nextUrl.pathname = `/${locale}${pathname}`;

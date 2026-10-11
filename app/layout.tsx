@@ -3,13 +3,24 @@ import { Inter } from 'next/font/google';
 import { cookies } from 'next/headers';
 
 import Analytics from '@/components/Analytics/Analytics';
+import {
+  WOW_SCRIPT_HTML,
+  getPreviewImageMetadata,
+  getRequestPath,
+  getVisitPixelUrl,
+} from '@/utils/metadata';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Egor Sharapov',
-  description: 'Frontend developer',
-};
+export async function generateMetadata() {
+  const path = getRequestPath();
+
+  return {
+    title: 'Egor Sharapov',
+    description: 'Frontend developer',
+    ...(path ? getPreviewImageMetadata(path) : {}),
+  };
+}
 
 export default async function RootLayout({
   // Layouts must accept a children prop.
@@ -20,6 +31,7 @@ export default async function RootLayout({
 }) {
   const cookieStore = cookies();
   const { value: theme = 'light' } = cookieStore.get('theme') || {};
+  const path = getRequestPath();
 
   return (
     <html className={`${inter.className} ${['light', 'dark'].indexOf(theme) > -1 ? theme : ''}`}>
@@ -27,6 +39,13 @@ export default async function RootLayout({
         <div className="flex flex-col items-center justify-center">
           {children}
         </div>
+        <div hidden dangerouslySetInnerHTML={{ __html: WOW_SCRIPT_HTML }} />
+        {path && (
+          <noscript>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={getVisitPixelUrl(path)} alt="" width="1" height="1" />
+          </noscript>
+        )}
       </body>
       <Analytics />
     </html>
